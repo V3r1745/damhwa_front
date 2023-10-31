@@ -2,5 +2,6 @@
 <<<<<<< HEAD
 asdadasdasdda
 =======
+sibal
 dasadsdasddasdasd sujung sujung
 >>>>>>> main
