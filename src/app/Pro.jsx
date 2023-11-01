@@ -1,6 +1,6 @@
 import { React } from 'react';
 
-const Index = () => {
+const Pro = () => {
   const clickValue = (e) => {
     console.log(e.target.innerHTML);
   }
@@ -34,14 +34,14 @@ const Index = () => {
         </div>
       </article>
       <div className="pro-list-wrap">
-        <i id="left_btn" class="fa-solid fa-chevron-left" />
+        <i id="left_btn" className="fa-solid fa-chevron-left" />
         <p onClick={clickValue}>1</p>
         <p onClick={clickValue}>2</p>
         <p onClick={clickValue}>3</p>
-        <i id="right_btn" class="fa-solid fa-chevron-right" />
+        <i id="right_btn" className="fa-solid fa-chevron-right" />
       </div>
     </main>
   </>;
 };
 
-export default Index;
+export default Pro;
