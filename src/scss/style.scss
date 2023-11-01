@@ -5,6 +5,8 @@
 * {
   margin: 0;
   padding: 0;
+  color: #333;
+  font-family: 'Noto Sans KR', sans-serif;
 }
 
 header {
@@ -12,18 +14,110 @@ header {
   justify-content: space-evenly;
   font-size: pxToVw(60);
   box-sizing: border-box;
+
   a {
     display: flex;
     align-items: center;
     padding: pxToVw(5) 0;
     height: pxToVw(145);
   }
+
   *:link {
     color: black;
     text-decoration: none;
   }
+
   img {
     height: pxToVw(145);
+  }
+}
+
+
+main {
+  background: #FCFFF9;
+
+  aside {
+    width: pxToVw(350);
+    height: pxToVw(925);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    float: left;
+
+    p {
+      width: pxToVw(350);
+      height: pxToVw(50);
+      font-size: pxToVw(40);
+      font-weight: bold;
+      text-align: center;
+    }
+
+    &>div {
+      font-size: pxToVw(30);
+      font-weight: bold;
+      cursor: pointer;
+
+      &:hover {
+        color: #777;
+      }
+    }
+
+  }
+
+  section {
+    width: pxToVw(1570);
+    height: pxToVw(925);
+    float: left;
+
+
+    article {
+      width: pxToVw(1300);
+      height: pxToVw(925);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+
+      &>div {
+        width: pxToVw(450);
+        height: pxToVw(380);
+        cursor: pointer;
+
+        &>img {
+          width: pxToVw(450);
+          height: pxToVw(280);
+        }
+
+        &>p {
+          font-size: pxToVw(25);
+        }
+      }
+    }
+  }
+
+  .pro-list-wrap {
+    width: pxToVw(120);
+    height: pxToVw(50);
+    position: absolute;
+    font-size: pxToVw(30);
+    top: pxToVw(1030);
+    left: pxToVw(1070);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .sample {
+    position: absolute;
+    top: pxToVw(900);
+    left: pxToVw(1790);
+    width: pxToVw(100);
+    height: pxToVw(100);
+    background: gray;
   }
 }
 
@@ -36,3 +130,4 @@ header {
 .bot-size {
   width: pxToVw(100);
 }
+
