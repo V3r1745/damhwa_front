@@ -4,6 +4,9 @@
   color: #333;
   font-family: 'Noto Sans KR', sans-serif; }
 
+*::-webkit-scrollbar {
+  display: none; }
+
 header {
   display: flex;
   justify-content: space-evenly;
@@ -19,7 +22,6 @@ header {
     text-decoration: none; }
   header img {
     height: 7.5520833333vw; }
-
 
 main {
   background: #FCFFF9; }
@@ -91,6 +93,5 @@ main {
 
 .bot-size {
   width: 5.2083333333vw; }
-
 
 /*# sourceMappingURL=style.css.map */
