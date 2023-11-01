@@ -26,3 +26,13 @@ header {
     height: pxToVw(145);
   }
 }
+
+.chat-bot {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+}
+
+.bot-size {
+  width: pxToVw(100);
+}

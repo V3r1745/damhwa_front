@@ -18,4 +18,12 @@ header {
   header img {
     height: 7.5520833333vw; }
 
+.chat-bot {
+  position: fixed;
+  bottom: 30px;
+  right: 20px; }
+
+.bot-size {
+  width: 5.2083333333vw; }
+
 /*# sourceMappingURL=style.css.map */
