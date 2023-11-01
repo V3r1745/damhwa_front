@@ -6,13 +6,13 @@ class Header extends React.Component {
     return (
       <>
         <header>
-          <Link to="/소개">소개</Link>
-          <Link to="/상점">상점</Link>
+            <Link to="/intro">소개</Link>
+            <Link to="/pro">상점</Link>
           <Link to="/">
-            <img src="" alt="" />
+            <img src="./src/img/logo/logo.svg" alt="logo" />
           </Link>
-          <Link to="/행사">행사</Link>
-          <Link to="/FAQ">FAQ</Link>
+            <Link to="/event">행사</Link>
+            <Link to="/faq">FAQ</Link>
         </header>
         <Outlet />
       </>
