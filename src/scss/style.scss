@@ -32,6 +32,7 @@ header {
   }
 }
 
+
 main {
   background: #FCFFF9;
 
@@ -119,3 +120,14 @@ main {
     background: gray;
   }
 }
+
+.chat-bot {
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+}
+
+.bot-size {
+  width: pxToVw(100);
+}
+
