@@ -37,6 +37,82 @@ header {
 }
 
 
+// --intro 파트 (2page)
+
+main{
+  background-color: #FCFFF9;
+}
+// 컨텐츠 오버 박스
+.intro-box{
+  background-color: #F9FFE3;
+  height: pxToVw(480);
+  // border: 1px solid red;
+}
+// 설립취지 폰트박스
+.effect-box{
+  // border: 1px solid red;
+  height: pxToVw(200);
+  width: pxToVw(800);
+  margin-left: pxToVw(220);
+  padding-top: pxToVw(40);
+}
+.effect-title{
+  margin-top: pxToVw(0);
+}
+.effect-str{
+  margin-top: pxToVw(20);
+  margin-left: pxToVw(40);
+}
+// 설립목표 폰트박스
+.target-box{
+  // border: 1px solid red;
+  height: pxToVw(200);
+  width: pxToVw(800);
+  margin-left: pxToVw(220);
+}
+.target-title{
+  margin-top: pxToVw(20);
+}
+.target-str{
+  margin-top: pxToVw(20);
+  margin-left: pxToVw(40);
+}
+// 이미지 박스
+.intro-img{
+  height: pxToVw(350);
+  width: pxToVw(550);
+  margin-top: pxToVw(-170);
+  // border: 1px solid red;
+  margin-left: pxToVw(1150);
+  position: absolute;
+}
+.intro-addition-img-box{
+  height: pxToVw(250);
+  // border: 1px solid blue;
+  display: flex;
+  justify-content:space-evenly;
+}
+.intro-underimg{
+  width: pxToVw(400);
+  height: pxToVw(285);
+}
+.intro-addition-img1{
+  width: pxToVw(200);
+  height: pxToVw(200);
+  margin-left: pxToVw(300);
+}
+.intro-addition-img2{
+  width: pxToVw(200);
+  height: pxToVw(200);
+  margin-left: pxToVw(300);
+}
+.intro-addition-img3{
+  width: pxToVw(200);
+  height: pxToVw(200);
+  margin-left: pxToVw(300);
+}
+
+
 main {
   background: #FCFFF9;
 
