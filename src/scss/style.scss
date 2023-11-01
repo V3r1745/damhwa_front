@@ -1,0 +1,28 @@
+@function pxToVw($px) {
+  @return $px / 1920 * 100vw;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: pxToVw(60);
+  box-sizing: border-box;
+  a {
+    display: flex;
+    align-items: center;
+    padding: pxToVw(5) 0;
+    height: pxToVw(145);
+  }
+  *:link {
+    color: black;
+    text-decoration: none;
+  }
+  img {
+    height: pxToVw(145);
+  }
+}
