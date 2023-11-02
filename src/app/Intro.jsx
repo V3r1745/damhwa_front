@@ -1,4 +1,4 @@
-// 2page-메인글
+// 2page-메인글 (MK)
 
 // 1920 X 1080
 // vw로 환산해서 만들기
@@ -25,9 +25,9 @@ const Intro = () => {
         {/* 컨텐츠 이미지 박스 */}
         <div className="intro-addition-img-box">
             {/* 이미지 태그 */}
-            <img className="intro-addition-img1, intro-underimg" src="" alt="" />
+            <img className="intro-addition-img1, intro-underimg" src="/src/img/green_phone.jpg" alt="" />
             <img className="intro-addition-img2, intro-underimg" src="/src/img/intro_icestraw.jpg" alt="" />
-            <img className="intro-addition-img3, intro-underimg" src="" alt="" />
+            <img className="intro-addition-img3, intro-underimg" src="/src/img/green_zigu.jpg" alt="" />
         </div>
     </main>
     </>
