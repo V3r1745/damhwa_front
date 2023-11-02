@@ -2,10 +2,13 @@
   margin: 0;
   padding: 0;
   color: #333;
-  font-family: 'Noto Sans KR', sans-serif; }
+  font-family: "Noto Sans KR", sans-serif; }
 
 *::-webkit-scrollbar {
   display: none; }
+
+.link-none:link {
+  text-decoration: none; }
 
 header {
   display: flex;
@@ -24,10 +27,10 @@ header {
     height: 7.5520833333vw; }
 
 main {
-  background-color: #FCFFF9; }
+  background-color: #fcfff9; }
 
 .intro-box {
-  background-color: #F9FFE3;
+  background-color: #f9ffe3;
   height: 25vw; }
 
 .effect-box {
@@ -67,10 +70,6 @@ main {
   display: flex;
   justify-content: space-evenly; }
 
-.intro-underimg {
-  width: 20.8333333333vw;
-  height: 14.84375vw; }
-
 .intro-addition-img1 {
   width: 10.4166666667vw;
   height: 10.4166666667vw;
@@ -87,7 +86,7 @@ main {
   margin-left: 15.625vw; }
 
 main {
-  background: #FCFFF9; }
+  background: #fcfff9; }
   main aside {
     width: 18.2291666667vw;
     height: 48.1770833333vw;
@@ -156,5 +155,80 @@ main {
 
 .bot-size {
   width: 5.2083333333vw; }
+
+.login-tag {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 1.0416666667vw; }
+
+.chatting-section {
+  width: 67.7083333333vw;
+  height: 46.875vw;
+  margin: 0.78125vw auto 3.125vw;
+  background-color: #313131;
+  border-radius: 30px;
+  box-sizing: border-box;
+  padding: 1.8229166667vw 2.6041666667vw; }
+
+.chatting-h1 {
+  color: white;
+  font-size: 2.0833333333vw; }
+
+.chatting-main {
+  height: calc(100% - 2.083vw - 7vw);
+  overflow-y: scroll; }
+
+.chatting-input {
+  height: 5.9895833333vw;
+  font-size: 1.8229166667vw;
+  padding-top: 1.5625vw;
+  padding-left: 1.3020833333vw;
+  padding-right: 1.3020833333vw;
+  background-color: #7d7d7d;
+  width: 80%;
+  box-sizing: border-box;
+  color: aliceblue;
+  resize: none; }
+  .chatting-input:focus {
+    outline: none; }
+
+.display-flex-space-ev {
+  display: flex;
+  justify-content: space-between; }
+
+.chatting-button {
+  font-size: 2.8645833333vw;
+  width: 15%;
+  background-color: transparent;
+  color: aliceblue;
+  border: 2px solid aliceblue; }
+
+.border-none {
+  border: none; }
+
+.border-radius-30 {
+  border-radius: 1.5625vw; }
+
+.border-radius-15 {
+  border-radius: 0.78125vw; }
+
+.chat-element {
+  display: inline-block;
+  max-width: 26.0416666667vw;
+  color: white;
+  background-color: #555555;
+  padding: 0.78125vw;
+  box-sizing: border-box;
+  margin-bottom: 0.78125vw; }
+
+.user-chat {
+  text-align: right; }
+
+.gpt-chat {
+  text-align: left; }
+
+.user-color {
+  background-color: #7166c6; }
 
 /*# sourceMappingURL=style.css.map */

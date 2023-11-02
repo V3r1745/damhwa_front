@@ -6,11 +6,17 @@
   margin: 0;
   padding: 0;
   color: #333;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 *::-webkit-scrollbar {
   display: none;
+}
+
+.link-none {
+  &:link {
+    text-decoration: none;
+  }
 }
 
 header {
@@ -36,49 +42,48 @@ header {
   }
 }
 
-
 // --intro 파트 (2page)
 
-main{
-  background-color: #FCFFF9;
+main {
+  background-color: #fcfff9;
 }
 // 컨텐츠 오버 박스
-.intro-box{
-  background-color: #F9FFE3;
+.intro-box {
+  background-color: #f9ffe3;
   height: pxToVw(480);
   // border: 1px solid red;
 }
 // 설립취지 폰트박스
-.effect-box{
+.effect-box {
   // border: 1px solid red;
   height: pxToVw(200);
   width: pxToVw(800);
   margin-left: pxToVw(220);
   padding-top: pxToVw(40);
 }
-.effect-title{
+.effect-title {
   margin-top: pxToVw(0);
 }
-.effect-str{
+.effect-str {
   margin-top: pxToVw(20);
   margin-left: pxToVw(40);
 }
 // 설립목표 폰트박스
-.target-box{
+.target-box {
   // border: 1px solid red;
   height: pxToVw(200);
   width: pxToVw(800);
   margin-left: pxToVw(220);
 }
-.target-title{
+.target-title {
   margin-top: pxToVw(20);
 }
-.target-str{
+.target-str {
   margin-top: pxToVw(20);
   margin-left: pxToVw(40);
 }
 // 이미지 박스
-.intro-img{
+.intro-img {
   height: pxToVw(350);
   width: pxToVw(550);
   margin-top: pxToVw(-170);
@@ -86,36 +91,35 @@ main{
   margin-left: pxToVw(1150);
   position: absolute;
 }
-.intro-addition-img-box{
+.intro-addition-img-box {
   height: pxToVw(250);
   // border: 1px solid blue;
   display: flex;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
 }
 // .intro-underimg{
 //   width: pxToVw(400);
 //   height: pxToVw(285);
 //   border-radius: pxToVw(10);
 // }
-.intro-addition-img1{
+.intro-addition-img1 {
   width: pxToVw(200);
   height: pxToVw(200);
   margin-left: pxToVw(300);
 }
-.intro-addition-img2{
+.intro-addition-img2 {
   width: pxToVw(200);
   height: pxToVw(200);
   margin-left: pxToVw(300);
 }
-.intro-addition-img3{
+.intro-addition-img3 {
   width: pxToVw(200);
   height: pxToVw(200);
   margin-left: pxToVw(300);
 }
-
 
 main {
-  background: #FCFFF9;
+  background: #fcfff9;
 
   aside {
     width: pxToVw(350);
@@ -134,7 +138,7 @@ main {
       text-align: center;
     }
 
-    &>div {
+    & > div {
       font-size: pxToVw(30);
       font-weight: bold;
       cursor: pointer;
@@ -143,14 +147,12 @@ main {
         color: #777;
       }
     }
-
   }
 
   section {
     width: pxToVw(1570);
     height: pxToVw(925);
     float: left;
-
 
     article {
       width: pxToVw(1300);
@@ -162,17 +164,17 @@ main {
       justify-content: space-evenly;
       align-items: center;
 
-      &>div {
+      & > div {
         width: pxToVw(450);
         height: pxToVw(380);
         cursor: pointer;
 
-        &>img {
+        & > img {
           width: pxToVw(450);
           height: pxToVw(280);
         }
 
-        &>p {
+        & > p {
           font-size: pxToVw(25);
         }
       }
@@ -212,3 +214,81 @@ main {
   width: pxToVw(100);
 }
 
+.login-tag {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: pxToVw(20);
+}
+
+.chatting-section {
+  width: pxToVw(1300);
+  height: pxToVw(900);
+  margin: pxToVw(15) auto pxToVw(60);
+  background-color: #313131;
+  border-radius: 30px;
+  box-sizing: border-box;
+  padding: pxToVw(35) pxToVw(50);
+}
+.chatting-h1 {
+  color: white;
+  font-size: pxToVw(40);
+}
+.chatting-main {
+  height: calc(100% - 2.083vw - 7vw);
+  overflow-y: scroll;
+}
+.chatting-input {
+  height: pxToVw(115);
+  font-size: pxToVw(35);
+  padding-top: pxToVw(30);
+  padding-left: pxToVw(25);
+  padding-right: pxToVw(25);
+  background-color: #7d7d7d;
+  width: 80%;
+  box-sizing: border-box;
+  color: aliceblue;
+  resize: none;
+  &:focus {
+    outline: none;
+  }
+}
+.display-flex-space-ev {
+  display: flex;
+  justify-content: space-between;
+}
+.chatting-button {
+  font-size: pxToVw(55);
+  width: 15%;
+  background-color: transparent;
+  color: aliceblue;
+  border: 2px solid aliceblue;
+}
+.border-none {
+  border: none;
+}
+.border-radius-30 {
+  border-radius: pxToVw(30);
+}
+.border-radius-15 {
+  border-radius: pxToVw(15);
+}
+.chat-element {
+  display: inline-block;
+  max-width: pxToVw(500);
+  color: white;
+  // width: pxToVw(500);
+  background-color: #555555;
+  padding: pxToVw(15);
+  box-sizing: border-box;
+  margin-bottom: pxToVw(15);
+}
+.user-chat {
+  text-align: right;
+}
+.gpt-chat {
+	text-align: left;
+}
+.user-color {
+	background-color: #7166c6;
+}
