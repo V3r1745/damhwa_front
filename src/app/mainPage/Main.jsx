@@ -1,9 +1,9 @@
-import Example from "./MainElement";
+import Element from "./MainElement";
 
 const MainPage = () => {
   return <>
     <main className="main-main">
-      <Example />
+      <Element />
     </main>
   </>
 }
