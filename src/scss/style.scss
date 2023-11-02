@@ -47,12 +47,14 @@ header {
 main {
   background-color: #fcfff9;
 }
+
 // 컨텐츠 오버 박스
 .intro-box {
   background-color: #f9ffe3;
   height: pxToVw(480);
   // border: 1px solid red;
 }
+
 // 설립취지 폰트박스
 .effect-box {
   // border: 1px solid red;
@@ -61,13 +63,16 @@ main {
   margin-left: pxToVw(220);
   padding-top: pxToVw(40);
 }
+
 .effect-title {
   margin-top: pxToVw(0);
 }
+
 .effect-str {
   margin-top: pxToVw(20);
   margin-left: pxToVw(40);
 }
+
 // 설립목표 폰트박스
 .target-box {
   // border: 1px solid red;
@@ -75,13 +80,16 @@ main {
   width: pxToVw(800);
   margin-left: pxToVw(220);
 }
+
 .target-title {
   margin-top: pxToVw(20);
 }
+
 .target-str {
   margin-top: pxToVw(20);
   margin-left: pxToVw(40);
 }
+
 // 이미지 박스
 .intro-img {
   height: pxToVw(350);
@@ -97,6 +105,7 @@ main {
   display: flex;
   justify-content: space-evenly;
 }
+
 // .intro-underimg{
 //   width: pxToVw(400);
 //   height: pxToVw(285);
@@ -107,18 +116,48 @@ main {
   height: pxToVw(200);
   margin-left: pxToVw(300);
 }
+
 .intro-addition-img2 {
   width: pxToVw(200);
   height: pxToVw(200);
   margin-left: pxToVw(300);
 }
+
 .intro-addition-img3 {
   width: pxToVw(200);
   height: pxToVw(200);
   margin-left: pxToVw(300);
 }
 
-main {
+// 메인 페이지 CSS
+.main-main {
+  width: pxToVw(1920);
+  height: pxToVw(600);
+  background: pink;
+  margin-top: pxToVw(50);
+
+  .each-slide-effect > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    height: pxToVw(600);
+  }
+
+  .each-slide-effect span {
+    padding: 20px;
+    font-size: 20px;
+    background: #efefef;
+    text-align: center;
+  }
+
+  & i {
+    display: none;
+  }
+}
+
+// 제품 페이지 CSS
+.pro-main {
   background: #fcfff9;
 
   aside {
@@ -149,6 +188,10 @@ main {
     }
   }
 
+  .pro_list_wrap > p {
+    cursor: pointer;
+  }
+
   section {
     width: pxToVw(1570);
     height: pxToVw(925);
@@ -173,10 +216,6 @@ main {
           width: pxToVw(450);
           height: pxToVw(280);
         }
-
-        & > p {
-          font-size: pxToVw(25);
-        }
       }
     }
   }
@@ -192,15 +231,10 @@ main {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-  }
 
-  .sample {
-    position: absolute;
-    top: pxToVw(900);
-    left: pxToVw(1790);
-    width: pxToVw(100);
-    height: pxToVw(100);
-    background: gray;
+    & > p {
+      cursor: pointer;
+    }
   }
 }
 
@@ -287,8 +321,8 @@ main {
   text-align: right;
 }
 .gpt-chat {
-	text-align: left;
+  text-align: left;
 }
 .user-color {
-	background-color: #7166c6;
+  background-color: #7166c6;
 }
