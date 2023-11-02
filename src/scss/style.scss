@@ -1,3 +1,4 @@
+
 @function pxToVw($px) {
   @return $px / 1920 * 100vw;
 }
@@ -144,6 +145,9 @@ main {
       }
     }
 
+    .pro_list_wrap>p {
+      cursor: pointer;
+    }
   }
 
   section {
