@@ -11,98 +11,80 @@ header {
   display: flex;
   justify-content: space-evenly;
   font-size: 3.125vw;
-  box-sizing: border-box;
-}
-header a {
-  display: flex;
-  align-items: center;
-  padding: 0.2604166667vw 0;
-  height: 7.5520833333vw;
-}
-header *:link {
-  color: black;
-  text-decoration: none;
-}
-header img {
-  height: 7.5520833333vw;
-}
+  box-sizing: border-box; }
+  header a {
+    display: flex;
+    align-items: center;
+    padding: 0.2604166667vw 0;
+    height: 7.5520833333vw; }
+  header *:link {
+    color: black;
+    text-decoration: none; }
+  header img {
+    height: 7.5520833333vw; }
 
 main {
-  background-color: #FCFFF9;
-}
+  background-color: #FCFFF9; }
 
 .intro-box {
   background-color: #F9FFE3;
-  height: 25vw;
-}
+  height: 25vw; }
 
 .effect-box {
   height: 10.4166666667vw;
   width: 41.6666666667vw;
   margin-left: 11.4583333333vw;
-  padding-top: 2.0833333333vw;
-}
+  padding-top: 2.0833333333vw; }
 
 .effect-title {
-  margin-top: 0vw;
-}
+  margin-top: 0vw; }
 
 .effect-str {
   margin-top: 1.0416666667vw;
-  margin-left: 2.0833333333vw;
-}
+  margin-left: 2.0833333333vw; }
 
 .target-box {
   height: 10.4166666667vw;
   width: 41.6666666667vw;
-  margin-left: 11.4583333333vw;
-}
+  margin-left: 11.4583333333vw; }
 
 .target-title {
-  margin-top: 1.0416666667vw;
-}
+  margin-top: 1.0416666667vw; }
 
 .target-str {
   margin-top: 1.0416666667vw;
-  margin-left: 2.0833333333vw;
-}
+  margin-left: 2.0833333333vw; }
 
 .intro-img {
   height: 18.2291666667vw;
   width: 28.6458333333vw;
   margin-top: -8.8541666667vw;
   margin-left: 59.8958333333vw;
-  position: absolute;
-}
+  position: absolute; }
 
 .intro-addition-img-box {
   height: 13.0208333333vw;
   display: flex;
-  justify-content: space-evenly;
-}
+  justify-content: space-evenly; }
 
 .intro-underimg {
   width: 20.8333333333vw;
-  height: 14.84375vw;
-}
+  height: 14.84375vw; }
 
 .intro-addition-img1 {
   width: 10.4166666667vw;
   height: 10.4166666667vw;
-  margin-left: 15.625vw;
-}
+  margin-left: 15.625vw; }
 
 .intro-addition-img2 {
   width: 10.4166666667vw;
   height: 10.4166666667vw;
-  margin-left: 15.625vw;
-}
+  margin-left: 15.625vw; }
 
 .intro-addition-img3 {
   width: 10.4166666667vw;
   height: 10.4166666667vw;
-  margin-left: 15.625vw;
-}
+  margin-left: 15.625vw; }
 
 main {
   background: #FCFFF9; }
