@@ -15,6 +15,11 @@ class Header extends React.Component {
           <Link to="/event">행사</Link>
           <Link to="/faq">FAQ</Link>
         </header>
+        <div className="login-tag">
+          <Link to="/login" className="link-none">
+            Login
+          </Link>
+        </div>
         <Outlet />
         <ChatBot />
       </>
