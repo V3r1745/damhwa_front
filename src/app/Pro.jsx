@@ -1,5 +1,6 @@
 import { React } from 'react';
 import ProElement from './ProElement';
+import { Outlet } from 'react-router-dom';
 
 const Pro = () => {
   const Element = (ProElement());
@@ -20,6 +21,7 @@ const Pro = () => {
         <i id="right_btn" className="fa-solid fa-chevron-right" />
       </div>
     </main>
+    <Outlet />
   </>;
 };
 

@@ -10,13 +10,19 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Header />}>
-        <Route path="/" element={<MainPage />} />
-        <Route path="/intro" element={<Intro />} />
-        <Route path="/pro" element={<Pro />} />
-        <Route path="/bot" element={<Bot />} />
+        <Route path="/" element={<MainPage />}>
+          <Route path="/bot" element={<Bot />} />
+        </Route>
+        <Route path="/intro" element={<Intro />}>
+          <Route path="/intro/bot" element={<Bot />} />
+        </Route>
+        <Route path="/pro" element={<Pro />}>
+          <Route path="/pro/bot" element={<Bot />} />
+        </Route>
       </Route>
     </Routes>
   );
 };
 
 export default App;
+//<Route path="/bot" element={<Bot />} />
