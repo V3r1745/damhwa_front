@@ -13,7 +13,7 @@ const ChatBot = () => {
       }`}
       className="chat-bot"
     >
-      <img src="./src/img/bot.svg" alt="chat bot" className="bot-size" />
+      <img src="/src/img/bot.svg" alt="chat bot" className="bot-size" />
     </Link>
   );
 };
