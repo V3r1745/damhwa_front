@@ -1,9 +1,10 @@
 import React from "react";
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useNavigate } from "react-router-dom";
 import ChatBot from "./bot/ChatBot";
 
 class Header extends React.Component {
   render() {
+    console.log(this.props);
     return (
       <>
         <header>

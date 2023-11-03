@@ -255,7 +255,21 @@ main {
   font-size: pxToVw(20);
 }
 
+@keyframes slideRightToLeft {
+  from {
+    transform: translate(100%, -50%);
+  }
+  to {
+    transform: translate(-50%, -50%);
+  }
+}
+
 .chatting-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: slideRightToLeft 1s forwards;
   width: pxToVw(1300);
   height: pxToVw(900);
   margin: pxToVw(15) auto pxToVw(60);
@@ -271,6 +285,8 @@ main {
 .chatting-main {
   height: calc(100% - 2.083vw - 7vw);
   overflow-y: scroll;
+  padding-top: pxToVw(15);
+  box-sizing: border-box;
 }
 .chatting-input {
   height: pxToVw(115);
@@ -325,4 +341,10 @@ main {
 }
 .user-color {
   background-color: #7166c6;
+}
+
+.close-bot {
+  font-size: pxToVw(40);
+  color: white;
+  float: right;
 }
