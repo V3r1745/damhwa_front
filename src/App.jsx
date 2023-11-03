@@ -22,12 +22,12 @@ const App = () => {
         <Route path="/" element={<MainPage />} />
         <Route path="/intro" element={<Intro />} />
         <Route path="/pro" element={<Pro />}>
-          <Route path="/pro/kitchen/1" element={<ProKitchen />} />
-          <Route path="/pro/living/1" element={<ProLiving />} />
-          <Route path="/pro/bathroom/1" element={<ProBathroom />} />
-          <Route path="/pro/storage/1" element={<ProStorage />} />
-          <Route path="/pro/clean/1" element={<ProClean />} />
-          <Route path="/pro/washing/1" element={<ProWashing />} />
+          <Route path="/pro/kitchen" element={<ProKitchen />} />
+          <Route path="/pro/living" element={<ProLiving />} />
+          <Route path="/pro/bathroom" element={<ProBathroom />} />
+          <Route path="/pro/storage" element={<ProStorage />} />
+          <Route path="/pro/clean" element={<ProClean />} />
+          <Route path="/pro/washing" element={<ProWashing />} />
         </Route>
         <Route path="/proDetail" element={<ProDetail />} />
         <Route path="/event" element={<EventPage />} />
