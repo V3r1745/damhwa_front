@@ -1,8 +1,13 @@
 import React from "react";
 import { Outlet, Link, useNavigate } from "react-router-dom";
 import ChatBot from "./bot/ChatBot";
+import Bot from "./bot/Bot";
 
 class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { bot: false, single: false };
+  }
   render() {
     console.log(this.props);
     return (
@@ -22,7 +27,12 @@ class Header extends React.Component {
           </Link>
         </div>
         <Outlet />
-        <ChatBot />
+        <ChatBot headerThis={this} />
+        <Bot
+          bot={this.state.bot}
+          single={this.state.single}
+          headerThis={this}
+        />
       </>
     );
   }

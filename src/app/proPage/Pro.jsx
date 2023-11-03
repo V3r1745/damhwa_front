@@ -1,7 +1,7 @@
 import { React } from 'react';
 import { Outlet, Link } from "react-router-dom";
 
-const Pro = () => {
+const Pro = (props) => {
   return <>
     <main className="pro-main">
       <aside>
@@ -19,6 +19,7 @@ const Pro = () => {
         </section>
       </article>
     </main>
+    {props.children}
   </>;
 };
 

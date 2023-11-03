@@ -5,7 +5,8 @@ import axios from "axios";
 
 axios.defaults.withCredentials = true;
 
-const Bot = () => {
+const Bot = (props) => {
+  // const [displayOption, setDisplayOption] = useState(false);
   if (localStorage.getItem("chat") === null) {
     localStorage.setItem(
       "chat",
@@ -92,10 +93,19 @@ const Bot = () => {
     }
   }, [chatElement]);
   return (
-    <div className="chatting-section">
+    <div
+      className={`chatting-section ${props.bot ? "in-bot" : "out-bot"} ${
+        props.single ? "dY" : "dN"
+      }`}
+    >
       <h1 className="chatting-h1">
         챗봇 질문하기
-        <Link to="../" className="close-bot xi-close link-none"></Link>
+        <p
+          className="close-bot xi-close link-none hover-cursor"
+          onClick={() => {
+            props.headerThis.setState({...props.headerThis, bot: !props.bot});
+          }}
+        ></p>
       </h1>
       <div className="chatting-main">
         {chatElement.map((v, i) => {
