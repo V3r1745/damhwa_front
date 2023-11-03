@@ -11,7 +11,7 @@ class Header extends React.Component {
           <Link to="/intro">소개</Link>
           <Link to="/pro">상점</Link>
           <Link to="/">
-            <img src="./src/img/logo/logo.svg" alt="logo" />
+            <img src="/src/img/logo/logo.svg" alt="logo" />
           </Link>
           <Link to="/event">행사</Link>
           <Link to="/faq">FAQ</Link>
