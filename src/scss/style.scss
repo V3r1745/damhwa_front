@@ -46,6 +46,8 @@ header {
 
 main {
   background-color: #fcfff9;
+  height: pxToVw(925);
+  height: pxToVw(925);
 }
 
 // 컨텐츠 오버 박스
@@ -99,6 +101,7 @@ main {
   margin-left: pxToVw(1150);
   position: absolute;
 }
+
 .intro-addition-img-box {
   height: pxToVw(250);
   // border: 1px solid blue;
@@ -133,7 +136,6 @@ main {
 .main-main {
   width: pxToVw(1920);
   height: pxToVw(600);
-  background: pink;
   margin-top: pxToVw(50);
 
   .each-slide-effect > div {
@@ -158,8 +160,6 @@ main {
 
 // 제품 페이지 CSS
 .pro-main {
-  background: #fcfff9;
-
   aside {
     width: pxToVw(350);
     height: pxToVw(925);
@@ -169,6 +169,17 @@ main {
     align-items: center;
     float: left;
 
+    & > *:link {
+      font-size: pxToVw(30);
+      font-weight: bold;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    &:hover {
+      color: blue;
+    }
+
     p {
       width: pxToVw(350);
       height: pxToVw(50);
@@ -176,45 +187,46 @@ main {
       font-weight: bold;
       text-align: center;
     }
-
-    & > div {
-      font-size: pxToVw(30);
-      font-weight: bold;
-      cursor: pointer;
-
-      &:hover {
-        color: #777;
-      }
-    }
   }
 
   .pro_list_wrap > p {
     cursor: pointer;
   }
 
-  section {
+  article {
     width: pxToVw(1570);
     height: pxToVw(925);
     float: left;
 
-    article {
+    section {
       width: pxToVw(1300);
       height: pxToVw(925);
       margin: 0 auto;
       display: flex;
       flex-wrap: wrap;
-      flex-direction: column;
-      justify-content: space-evenly;
+      flex-direction: row;
       align-items: center;
+      align-content: center;
+      justify-content: space-around;
 
-      & > div {
+      & > *:link {
+        text-decoration: none;
+      }
+
+      & div {
         width: pxToVw(450);
         height: pxToVw(380);
         cursor: pointer;
 
-        & > img {
+        & img {
           width: pxToVw(450);
           height: pxToVw(280);
+        }
+
+        & p {
+          width: pxToVw(450);
+          height: pxToVw(100);
+          font-size: pxToVw(20);
         }
       }
     }
@@ -238,6 +250,127 @@ main {
   }
 }
 
+// 행사 페이지 CSS
+.event-main {
+  & > article > *:link {
+    text-decoration: none;
+  }
+
+  .text-box {
+    width: pxToVw(200);
+    height: pxToVw(50);
+    margin-left: pxToVw(260);
+
+    & > i {
+      font-size: pxToVw(50);
+      float: left;
+    }
+
+    & > p {
+      height: pxToVw(50);
+      line-height: 1.6;
+      margin-left: pxToVw(10);
+      font-size: pxToVw(30);
+      font-weight: bold;
+      float: left;
+    }
+  }
+
+  section {
+    width: pxToVw(1400);
+    height: pxToVw(340);
+    display: flex;
+    margin: pxToVw(15) auto;
+    justify-content: space-between;
+
+    & > div {
+      width: pxToVw(400);
+      height: pxToVw(340);
+      cursor: pointer;
+
+      & > img {
+        width: pxToVw(400);
+        height: pxToVw(250);
+      }
+
+      & > p {
+        font-size: pxToVw(20);
+      }
+    }
+  }
+
+  .event-show-all {
+    width: pxToVw(250);
+    height: pxToVw(80);
+    font-size: pxToVw(30);
+    font-weight: bold;
+    text-align: center;
+    line-height: 2.5;
+    display: flex;
+    margin: 0 auto;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+
+// 전체 행사 페이지 CSS
+.event-all-main {
+  article {
+    .text-box {
+      width: pxToVw(200);
+      height: pxToVw(50);
+      margin-left: pxToVw(135);
+
+      & > i {
+        font-size: pxToVw(50);
+        float: left;
+      }
+
+      & > p {
+        height: pxToVw(50);
+        line-height: 1.6;
+        margin-left: pxToVw(10);
+        font-size: pxToVw(30);
+        font-weight: bold;
+        float: left;
+      }
+    }
+
+    & > section {
+      width: pxToVw(1700);
+      height: pxToVw(800);
+      margin: pxToVw(15) auto;
+      overflow: scroll;
+
+      .event-all-wrap {
+        width: pxToVw(1700);
+        height: pxToVw(1600);
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: stretch;
+
+        .event-all-each-box {
+          width: pxToVw(370);
+          height: pxToVw(350);
+          cursor: pointer;
+
+          & > img {
+            width: pxToVw(370);
+            height: pxToVw(250);
+          }
+
+          & > p {
+            font-size: pxToVw(20);
+          }
+        }
+      }
+    }
+  }
+}
+
 .chat-bot {
   position: fixed;
   bottom: 30px;
@@ -255,7 +388,31 @@ main {
   font-size: pxToVw(20);
 }
 
+@keyframes slideRightToLeft {
+  from {
+    transform: translate(100%, -50%);
+  }
+
+  to {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(100%, -50%);
+  }
+}
+
 .chatting-section {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  // animation: slideRightToLeft 1s forwards;
   width: pxToVw(1300);
   height: pxToVw(900);
   margin: pxToVw(15) auto pxToVw(60);
@@ -264,14 +421,26 @@ main {
   box-sizing: border-box;
   padding: pxToVw(35) pxToVw(50);
 }
+
+.in-bot {
+  animation: slideRightToLeft 1s forwards;
+}
+.out-bot {
+  animation: slideOut 1s forwards;
+}
+
 .chatting-h1 {
   color: white;
   font-size: pxToVw(40);
 }
+
 .chatting-main {
   height: calc(100% - 2.083vw - 7vw);
   overflow-y: scroll;
+  padding-top: pxToVw(15);
+  box-sizing: border-box;
 }
+
 .chatting-input {
   height: pxToVw(115);
   font-size: pxToVw(35);
@@ -283,14 +452,17 @@ main {
   box-sizing: border-box;
   color: aliceblue;
   resize: none;
+
   &:focus {
     outline: none;
   }
 }
+
 .display-flex-space-ev {
   display: flex;
   justify-content: space-between;
 }
+
 .chatting-button {
   font-size: pxToVw(55);
   width: 15%;
@@ -298,15 +470,19 @@ main {
   color: aliceblue;
   border: 2px solid aliceblue;
 }
+
 .border-none {
   border: none;
 }
+
 .border-radius-30 {
   border-radius: pxToVw(30);
 }
+
 .border-radius-15 {
   border-radius: pxToVw(15);
 }
+
 .chat-element {
   display: inline-block;
   max-width: pxToVw(500);
@@ -317,16 +493,20 @@ main {
   box-sizing: border-box;
   margin-bottom: pxToVw(15);
 }
+
 .user-chat {
   text-align: right;
 }
+
 .gpt-chat {
   text-align: left;
 }
+
 .user-color {
   background-color: #7166c6;
 }
 
+<<<<<<< HEAD
 // -- 로그인 페이지
 
 // 배경 색상
@@ -402,3 +582,24 @@ main {
 // .login-join-membership-btn:hover{
   
 // }
+=======
+.close-bot {
+  font-size: pxToVw(40);
+  color: white;
+  float: right;
+}
+
+.hover-cursor {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.dY {
+  display: block;
+}
+
+.dN {
+  display: none;
+}
+>>>>>>> 101b8133516c5c1d68dd1fc98588036b8693f236
