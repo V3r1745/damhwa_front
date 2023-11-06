@@ -5,7 +5,7 @@ import Intro from "./app/Intro";
 import Pro from "./app/proPage/Pro";
 import ProHome from "./app/proPage/ProHome";
 import ProDetail from "./app/proPage/ProDetail";
-import Bot from "./app/bot/Bot";
+// import Bot from "./app/bot/Bot";
 import MainPage from "./app/mainPage/Main";
 import Login from "./app/loginPage/Login";
 import EventPage from "./app/eventPage/Event";
@@ -15,25 +15,15 @@ import ProLiving from "./app/proPage/proCategory/Living";
 import ProBathroom from "./app/proPage/proCategory/Bathroom";
 import ProStorage from "./app/proPage/proCategory/Storage";
 import ProClean from "./app/proPage/proCategory/Clean";
-<<<<<<< Updated upstream
 import Cart from "./app/cartPage/Cart"
-=======
-import ProWashing from "./app/proPage/proCategory/Washing";
+// import ProWashing from "./app/proPage/proCategory/Washing";
 import JoinMembership from "./app/loginPage/JoinMembership";
->>>>>>> Stashed changes
 
 const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Header />}>
         <Route path="/" element={<MainPage />} />
-<<<<<<< Updated upstream
-        <Route path="/intro" element={<Intro />} />
-        <Route path="/pro" element={<Pro />} />
-        <Route path="/bot" element={<Bot />} />
-        <Route path="/login" element={<Login />} />
-=======
->>>>>>> Stashed changes
         <Route path="/intro" element={<Intro />}>
           {/* <Route path="/intro/bot" element={<Bot />} /> */}
         </Route>
@@ -52,11 +42,8 @@ const App = () => {
         <Route path="/event" element={<EventPage />} />
         <Route path="/eventAll" element={<EventAllPage />} />
         {/* <Route path="/bot" element={<Bot />} /> */}
-<<<<<<< Updated upstream
-=======
         <Route path="/login" element={<Login />} />
         <Route path="/membership" element={<JoinMembership />} />
->>>>>>> Stashed changes
       </Route>
     </Routes>
   );

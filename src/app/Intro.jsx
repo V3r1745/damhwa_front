@@ -54,7 +54,6 @@ const Intro = () => {
         </div>
       </main>
       <Outlet />
-<<<<<<< Updated upstream
     </>)
   };
 
@@ -64,12 +63,3 @@ export default Intro;
 //<p className="gpt-message">소개 페이지입니다.</p>
 //<div className="gpt-message-angle"></div>
 //</div>
-=======
-    </>
-  );
-};
-
-export default Intro;
-
-//   const effectText =
->>>>>>> Stashed changes
