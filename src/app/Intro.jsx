@@ -9,7 +9,7 @@ import { React } from 'react';
 const Intro = () => {
   return (
     <>
-      <main>
+      <main className="intro-main">
         {/* 컨텐츠 오버 박스 */}
         <div className="intro-box">
           {/* 설립취지 폰트박스 */}
@@ -21,7 +21,6 @@ const Intro = () => {
               만들고자 시작하였습니다.
             </p>
           </div>
-          <img className="intro-img" src="/src/img/intro_img.png" alt="" />
           {/* 설립목표 폰트박스 */}
           <div className="target-box">
             <h1 className="target-title">설립목표</h1>
@@ -31,39 +30,36 @@ const Intro = () => {
             </p>
             {/* 이미지 박스 */}
           </div>
+          <img className="intro-img" src="/src/img/intro_img.png" alt="intro_img.png" />
         </div>
 
         {/* 컨텐츠 이미지 박스 */}
         <div className="intro-addition-img-box">
           {/* 이미지 태그 */}
           <img
-            className="intro-addition-img1, intro-underimg"
+            className="intro-addition-img1 intro-underimg"
             src="/src/img/green_phone.jpg"
-            alt=""
+            alt="green_phone.jpg"
           />
           <img
-            className="intro-addition-img2, intro-underimg"
+            className="intro-addition-img2 intro-underimg"
             src="/src/img/intro_icestraw.jpg"
-            alt=""
+            alt="intro_icestraw.jpg"
           />
           <img
-            className="intro-addition-img3, intro-underimg"
+            className="intro-addition-img3 intro-underimg"
             src="/src/img/green_zigu.jpg"
-            alt=""
+            alt="green_zigu.jpg"
           />
         </div>
       </main>
       <Outlet />
-    </>
-<<<<<<< HEAD
+    </>)
   };
-  
-  export default Intro;
-=======
-  );
-};
 
 export default Intro;
 
-//   const effectText =
->>>>>>> 101b8133516c5c1d68dd1fc98588036b8693f236
+//<div className="gpt-message-box">
+//<p className="gpt-message">소개 페이지입니다.</p>
+//<div className="gpt-message-angle"></div>
+//</div>

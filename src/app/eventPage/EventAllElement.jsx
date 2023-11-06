@@ -1,8 +1,9 @@
 const EventAllElement = () => {
-  const eventElements = { "text": ["text", "text", "text", "text", "text", "text", "text", "text", "text", "text", "text", "text", "text", "text", "text", "text"] }
-  let eventElement = eventElements["text"].map((v, i) => <div key={i} className="event-all-each-box">
+  const eventElements = { "event-all-title": ["제목1", "제목2", "제목3", "제목4", "제목5", "제목6", "제목7", "제목8", "제목9", "제목10", "제목11", "제목12", "제목13", "제목14", "제목15", "제목16"], "event-all-date": ["행사일정: 2023-10-11 ~ 2023-10-13", "행사일정: 2023-10-11 ~ 2023-10-13", "행사일정: 2023-10-11 ~ 2023-10-13", "행사일정: 2023-10-11 ~ 2023-10-13", "행사일정: 2023-10-11 ~ 2023-10-13", "행사일정: 2023-10-11 ~ 2023-10-13", "행사일정: 2023-10-11 ~ 2023-10-13", "행사일정: 2023-10-11 ~ 2023-10-13", "행사일정: 2023-10-11 ~ 2023-10-13", "행사일정: 2023-10-11 ~ 2023-10-13", "행사일정: 2023-10-11 ~ 2023-10-13", "행사일정: 2023-10-11 ~ 2023-10-13", "행사일정: 2023-10-11 ~ 2023-10-13", "행사일정: 2023-10-11 ~ 2023-10-13", "행사일정: 2023-10-11 ~ 2023-10-13", "행사일정: 2023-10-11 ~ 2023-10-13"] }
+  let eventElement = eventElements["event-all-title"].map((v, i) => <div key={i} className="event-all-each-box">
     <img src="/" />
-    <p>{v}</p>
+    <p className="event-title">{v}</p>
+    <p className="event-date">{eventElements["event-all-date"][i]}</p>
   </div>)
   return [eventElement];
 }
