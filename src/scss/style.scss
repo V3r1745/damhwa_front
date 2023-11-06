@@ -20,116 +20,104 @@
 }
 
 header {
-  display: flex;
-  justify-content: space-evenly;
-  font-size: pxToVw(60);
-  box-sizing: border-box;
-
-  a {
-    display: flex;
-    align-items: center;
-    padding: pxToVw(5) 0;
-    height: pxToVw(145);
-  }
+  width: pxToVw(1920);
+  height: pxToVw(155);
+  background: #EEFFEB;
 
   *:link {
-    color: black;
     text-decoration: none;
   }
 
-  img {
-    height: pxToVw(145);
+  .logo-box {
+    width: pxToVw(350);
+    height: pxToVw(155);
+    float: left;
+    display: flex;
+    justify-content: center;
+
+    img {
+      padding: pxToVw(15);
+      height: pxToVw(125);
+    }
+  }
+
+  .banner-box {
+    width: pxToVw(1400);
+    height: pxToVw(155);
+    float: right;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    &>*:link {
+      font-size: pxToVw(50);
+    }
   }
 }
 
 // --intro 파트 (2page)
 
-main {
+.intro-main {
   background-color: #fcfff9;
   height: pxToVw(925);
-  height: pxToVw(925);
-}
-
-// 컨텐츠 오버 박스
-.intro-box {
-  background-color: #f9ffe3;
-  height: pxToVw(480);
-  // border: 1px solid red;
-}
-
-// 설립취지 폰트박스
-.effect-box {
-  // border: 1px solid red;
-  height: pxToVw(200);
-  width: pxToVw(800);
-  margin-left: pxToVw(220);
-  padding-top: pxToVw(40);
-}
-
-.effect-title {
-  margin-top: pxToVw(0);
-}
-
-.effect-str {
-  margin-top: pxToVw(20);
-  margin-left: pxToVw(40);
-}
-
-// 설립목표 폰트박스
-.target-box {
-  // border: 1px solid red;
-  height: pxToVw(200);
-  width: pxToVw(800);
-  margin-left: pxToVw(220);
-}
-
-.target-title {
-  margin-top: pxToVw(20);
-}
-
-.target-str {
-  margin-top: pxToVw(20);
-  margin-left: pxToVw(40);
-}
-
-// 이미지 박스
-.intro-img {
-  height: pxToVw(350);
-  width: pxToVw(550);
-  margin-top: pxToVw(-170);
-  // border: 1px solid red;
-  margin-left: pxToVw(1150);
-  position: absolute;
-}
-
-.intro-addition-img-box {
-  height: pxToVw(250);
-  // border: 1px solid blue;
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
-}
 
-// .intro-underimg{
-//   width: pxToVw(400);
-//   height: pxToVw(285);
-//   border-radius: pxToVw(10);
-// }
-.intro-addition-img1 {
-  width: pxToVw(200);
-  height: pxToVw(200);
-  margin-left: pxToVw(300);
-}
+  // 컨텐츠 오버 박스
+  .intro-box {
+    width: pxToVw(1920);
+    height: pxToVw(480);
+    background-color: #f9ffe3;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+  
+    // 설립취지 폰트박스
+    .effect-box {
+      height: pxToVw(200);
+      width: pxToVw(800);
+      padding-top: pxToVw(40);
+    }
+  
+    // 설립목표 폰트박스
+    .target-box {
+      height: pxToVw(200);
+      width: pxToVw(800);
+    }
 
-.intro-addition-img2 {
-  width: pxToVw(200);
-  height: pxToVw(200);
-  margin-left: pxToVw(300);
-}
+    // 이미지 박스
+    .intro-img {
+      height: pxToVw(350);
+      width: pxToVw(550);
+      margin-left: pxToVw(100);
+    }
+  }
 
-.intro-addition-img3 {
-  width: pxToVw(200);
-  height: pxToVw(200);
-  margin-left: pxToVw(300);
+  .intro-addition-img-box {
+    width: pxToVw(1800);
+    height: pxToVw(300);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+
+    .intro-addition-img1 {
+      width: pxToVw(400);
+      height: pxToVw(300);
+    }
+
+    .intro-addition-img2 {
+      width: pxToVw(500);
+      height: pxToVw(300);
+    }
+
+    .intro-addition-img3 {
+      width: pxToVw(300);
+      height: pxToVw(300);
+    }
+  }
 }
 
 // 메인 페이지 CSS
@@ -146,13 +134,6 @@ main {
     height: pxToVw(600);
   }
 
-  .each-slide-effect span {
-    padding: 20px;
-    font-size: 20px;
-    background: #efefef;
-    text-align: center;
-  }
-
   & i {
     display: none;
   }
@@ -160,32 +141,53 @@ main {
 
 // 제품 페이지 CSS
 .pro-main {
+
   aside {
     width: pxToVw(350);
     height: pxToVw(925);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
     float: left;
+    background: #333651;
 
-    & > *:link {
-      font-size: pxToVw(30);
-      font-weight: bold;
-      cursor: pointer;
-      text-decoration: none;
-    }
-
-    &:hover {
-      color: blue;
-    }
-
-    p {
+    .pro-category {
       width: pxToVw(350);
-      height: pxToVw(50);
-      font-size: pxToVw(40);
-      font-weight: bold;
-      text-align: center;
+      height: pxToVw(65);
+      display: flex;
+      background: #7486C8;
+
+      i {
+        width: pxToVw(50);
+        height: pxToVw(65);
+        text-align: center;
+        line-height: pxToVw(65);
+        color: #fff;
+        font-size: pxToVw(30);
+      }
+
+      p {
+        width: pxToVw(250);
+        height: pxToVw(65);
+        font-size: pxToVw(25);
+        font-weight: bold;
+        line-height: pxToVw(65);
+        color: #fff;
+        text-align: center;
+      }
+    }
+
+    .pro-category-box {
+      width: pxToVw(350);
+      height: pxToVw(785);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+
+      &>*:link {
+        font-size: pxToVw(30);
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+      }
     }
   }
 
@@ -198,9 +200,28 @@ main {
     height: pxToVw(925);
     float: left;
 
-    section {
+    .pro-slide-effect>div {
+      width: pxToVw(1570);
+      height: pxToVw(400);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-size: cover;
+    }
+
+    .pro-main-img {
+      width: pxToVw(1570);
+      height: pxToVw(525);
+    }
+  
+    & i {
+      color: #ddd;
+      font-size: pxToVw(50);
+    }
+
+    .pro-section {
       width: pxToVw(1300);
-      height: pxToVw(925);
+      height: pxToVw(895);
       margin: 0 auto;
       display: flex;
       flex-wrap: wrap;
@@ -208,12 +229,12 @@ main {
       align-items: center;
       align-content: center;
       justify-content: space-around;
-
-      & > *:link {
+      
+      &>*:link {
         text-decoration: none;
       }
 
-      & div {
+      & .pro-content-each {
         width: pxToVw(450);
         height: pxToVw(380);
         cursor: pointer;
@@ -223,11 +244,172 @@ main {
           height: pxToVw(280);
         }
 
-        & p {
+        &>.pro-each-text {
           width: pxToVw(450);
-          height: pxToVw(100);
+          height: pxToVw(60);
           font-size: pxToVw(20);
         }
+
+        &>.pro-each-price {
+          width: pxToVw(450);
+          height: pxToVw(30);
+          text-align: left;
+          font-size: pxToVw(20);
+          font-weight: bold;
+        }
+      }
+    }
+
+    .pro-detail-section {
+      width: pxToVw(1300);
+      height: pxToVw(895);
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-start;
+      align-content: center;
+
+      .img-box {
+        width: pxToVw(600);
+        height: pxToVw(510);
+        display: flex;
+        flex-direction: column;
+
+        &>img {
+          width: pxToVw(600);
+          height: pxToVw(400);
+          border-radius: pxToVw(10);
+        }
+
+        &>div {
+          width: pxToVw(600);
+          height: pxToVw(100);
+          padding: pxToVw(5) 0;
+
+          &>img {
+            width: pxToVw(90);
+            height: pxToVw(90);
+            padding: pxToVw(5);
+            border-radius: pxToVw(10);
+          }
+        }
+      }
+
+      .func-box {
+        width: pxToVw(600);
+        height: pxToVw(500);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-content: flex-start;
+
+        .pro-name {
+          width: pxToVw(600);
+          height: pxToVw(230);
+          padding: pxToVw(15);
+          font-size: pxToVw(25);
+          font-weight: bold;
+        }
+
+        .price-box {
+          width: pxToVw(590);
+          height: pxToVw(70);
+          padding-right: pxToVw(10);
+          font-size: pxToVw(30);
+          font-weight: bold;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          letter-spacing: pxToVw(1);
+        }
+
+        .count-box {
+          width: pxToVw(190);
+          height: pxToVw(70);
+          margin-left: pxToVw(10);
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+
+          &>* {
+            width: pxToVw(50);
+            height: pxToVw(50);
+            font-size: pxToVw(30);
+            font-weight: bold;
+            border-radius: pxToVw(10);
+            border: pxToVw(3) solid #aaa;
+            line-height: pxToVw(50);
+            text-align: center;
+            cursor: pointer;
+          }
+
+          input::-webkit-inner-spin-button {
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+          }
+
+          input {
+            background: #fff;
+            outline: none;
+          }
+        }
+
+        .purchase-box {
+          width: pxToVw(400);
+          height: pxToVw(70);
+          display: flex;
+          font-size: pxToVw(20);
+          align-items: center;
+          justify-content: space-evenly;
+
+          &>* {
+            width: pxToVw(180);
+            height: pxToVw(50);
+            text-align: center;
+            line-height: pxToVw(50);
+            border: pxToVw(3) solid #aaa;
+            cursor: pointer;
+          }
+
+          .pro-basket {
+            color: #399f37;
+            border: pxToVw(3) solid #54C152;
+          }
+
+          .pro-purchase {
+            color: #fff;
+            background: #54C152;
+          }
+        }
+      }
+
+      .pro-description {
+        width: pxToVw(1160);
+        height: pxToVw(160);
+        font-size: pxToVw(20);
+        padding: pxToVw(20) pxToVw(20);
+        border-radius: pxToVw(20);
+        background: #efefef;
+      }
+    }
+
+    & .page-box {
+      width: pxToVw(200);
+      height: pxToVw(30);
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+
+      &>* {
+        font-size: pxToVw(25);
+        font-weight: bold;
+        text-align: center;
+        text-decoration: none;
+        cursor: pointer;
       }
     }
   }
@@ -293,7 +475,13 @@ main {
         height: pxToVw(250);
       }
 
-      & > p {
+      &>.event-title {
+        font-size: pxToVw(25);
+        font-weight: bold;
+      }
+
+      &>.event-date {
+        margin-top: pxToVw(10);
         font-size: pxToVw(20);
       }
     }
@@ -362,7 +550,13 @@ main {
             height: pxToVw(250);
           }
 
-          & > p {
+          &>.event-title {
+            font-size: pxToVw(25);
+            font-weight: bold;
+          }
+
+          &>.event-date {
+            margin-top: pxToVw(10);
             font-size: pxToVw(20);
           }
         }
@@ -379,13 +573,6 @@ main {
 
 .bot-size {
   width: pxToVw(100);
-}
-
-.login-tag {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: pxToVw(20);
 }
 
 @keyframes slideRightToLeft {
@@ -502,11 +689,48 @@ main {
   text-align: left;
 }
 
+.gpt-message-box {
+  width: pxToVw(300);
+  height: pxToVw(150);
+  position: absolute;
+  top: pxToVw(670);
+  left: pxToVw(1585);
+  border-radius: pxToVw(20);
+  background: #ddd;
+  animation-name: gptMessageDisapper;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+  .gpt-message {
+    font-size: pxToVw(20);
+    font-weight: bold;
+    padding: pxToVw(10);
+  }
+
+  .gpt-message-angle {
+    width: pxToVw(0);
+    height: pxToVw(0);
+    border-bottom: pxToVw(50) solid transparent;
+    border-top: pxToVw(50) solid #ddd;
+    border-left: pxToVw(25) solid transparent;
+    border-right: pxToVw(25) solid transparent;
+    position: absolute;
+    top: pxToVw(140);
+    left: pxToVw(235);
+  }
+}
+
+@keyframes gptMessageDisapper {
+  0%   { opacity: 1; }
+  90%   { opacity: 1; }
+  100% { opacity: 0; display: none; }
+}
+
 .user-color {
   background-color: #7166c6;
 }
 
-<<<<<<< HEAD
 // -- 로그인 페이지
 
 // 배경 색상
@@ -582,7 +806,6 @@ main {
 // .login-join-membership-btn:hover{
   
 // }
-=======
 .close-bot {
   font-size: pxToVw(40);
   color: white;
@@ -602,4 +825,3 @@ main {
 .dN {
   display: none;
 }
->>>>>>> 101b8133516c5c1d68dd1fc98588036b8693f236

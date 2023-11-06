@@ -13,19 +13,24 @@ class Header extends React.Component {
     return (
       <>
         <header>
-          <Link to="/intro">소개</Link>
-          <Link to="/pro">상점</Link>
-          <Link to="/">
-            <img src="/src/img/logo/logo.svg" alt="logo" />
-          </Link>
-          <Link to="/event">행사</Link>
-          <Link to="/faq">FAQ</Link>
+          <div className="logo-box">
+            <Link to="/">
+              <img src="/src/img/logo/logo.svg" alt="logo" />
+            </Link>
+          </div>
+          <div className="banner-box">
+            <Link to="/intro">소개</Link>
+            <i className="xi-recording" />
+            <Link to="/pro">상점</Link>
+            <i className="xi-recording" />
+            <Link to="/event">행사</Link>
+            <i className="xi-recording" />
+            <Link to="/faq">FAQ</Link>
+            <i className="xi-recording" />
+            <Link to="/login">로그인</Link>
+            <Link to="/cart"><i className="xi-cart" /></Link>
+          </div>
         </header>
-        <div className="login-tag">
-          <Link to="/login" className="link-none">
-            Login
-          </Link>
-        </div>
         <Outlet />
         <ChatBot headerThis={this} />
         <Bot

@@ -1,12 +1,14 @@
 const EventElement = () => {
-  const eventElement = { "online": ["행사일정: 2023-10-11 ~ 2023-10-13 국내 최초 ESG 친환경 산업 전문 박람회로 .", "행사일정: 2023-10-11 ~ 2023-10-13 국내 최초 ESG 친환경 산업 전문 ㅂㅈㄷㅂㅈㄷㄷ로 .", "행사일정: 2023-10-11 ~ 2023-10-13 국내 최초 ESG 친환ㄴㅇㅎㄴㅇ ."], "offline": ["행사일정: 2023-10-11 ~ 2023-10-13 국내 최초 ESG 친환경 산업 전문 asdasdsd .", "행사일정: 2023-10-11 ~ 2023-10-13 국내 최초 ESG 친환경 산업fddfgdfgdfg .", "행사일정: 2023-10-11 ~ 2023-10-13 국내 최초 ESG 친환경 산fghgfhfhf ."] };
-  let onlineElement = eventElement["online"].map((v, i) => <div key={i} className="event-each-box">
+  const eventElement = { "online-title": ["제목1", "제목2", "제목3"], "online-date": ["행사일정: 2023-10-11 ~ 2023-10-13", "행사일정: 2023-10-11 ~ 2023-10-13", "행사일정: 2023-10-11 ~ 2023-10-13"], "offline-title": ["제목1", "제목2", "제목3"], "offline-date": ["행사일정: 2023-10-11 ~ 2023-10-13", "행사일정: 2023-10-11 ~ 2023-10-13", "행사일정: 2023-10-11 ~ 2023-10-13"] };
+  let onlineElement = eventElement["online-title"].map((v, i) => <div key={i} className="event-each-box">
     <img src="/" />
-    <p>{v}</p>
+    <p className="event-title">{v}</p>
+    <p className="event-date">{eventElement["online-date"][i]}</p>
   </div>)
-  let offlineElement = eventElement["offline"].map((v, i) => <div key={i} className="event-each-box">
+  let offlineElement = eventElement["offline-title"].map((v, i) => <div key={i} className="event-each-box">
     <img src="/" />
-    <p>{v}</p>
+    <p className="event-title">{v}</p>
+    <p className="event-date">{eventElement["offline-date"][i]}</p>
   </div>)
   return [onlineElement, offlineElement];
 }
