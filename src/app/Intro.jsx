@@ -3,6 +3,8 @@
 // 1920 X 1080
 // vw로 환산해서 만들기
 
+import { React } from 'react';
+
 const Intro = () => {
     return <>
     <main>
@@ -34,5 +36,3 @@ const Intro = () => {
   };
   
   export default Intro;
-
-//   const effectText = 

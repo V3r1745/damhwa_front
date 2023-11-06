@@ -298,4 +298,75 @@ main {
   background-color: #7166c6;
 }
 
+.login-main {
+  width: 101.5625vw;
+  height: 39.5833333333vw;
+  position: absolute;
+  background-color: #fcfff9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-outbox {
+  width: 31.25vw;
+  height: 26.0416666667vw;
+  margin-top: -5.2083333333vw;
+  background-color: rgba(237, 252, 155, 0.824);
+  border-radius: 10px;
+  box-shadow: 2px 2px rgba(128, 128, 128, 0.459);
+}
+
+.login-logobox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3.6458333333vw;
+}
+
+.login-logo-font {
+  font-size: 2.6041666667vw;
+  margin-left: -0.5208333333vw;
+  font-weight: 100;
+}
+
+.login-input-textbox {
+  text-align: center;
+  height: 2.6041666667vw;
+  width: 20.8333333333vw;
+  display: flex;
+  margin-left: 4.6875vw;
+  margin-top: 5.2083333333vw;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 1px inset rgba(128, 128, 128, 0.568);
+}
+
+.login-next-btn {
+  height: 2.6041666667vw;
+  width: 20.8333333333vw;
+  margin-left: 4.6875vw;
+  display: flex;
+  margin-top: 1.0416666667vw;
+  background-color: #4EAAFF;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.0416666667vw;
+  border-radius: 10px;
+  color: aliceblue;
+  box-shadow: 1px 1px rgba(155, 155, 155, 0.555);
+}
+
+.login-join-membership-btn {
+  position: absolute;
+  margin-left: -0.5208333333vw;
+  margin-top: 31.25vw;
+  background: none;
+  border: none;
+  font-size: 1.0416666667vw;
+  color: rgb(71, 71, 253);
+}
+
 /*# sourceMappingURL=style.css.map */
