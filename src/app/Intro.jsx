@@ -4,6 +4,8 @@ import { Outlet } from "react-router-dom";
 // 1920 X 1080
 // vw로 환산해서 만들기
 
+import { React } from 'react';
+
 const Intro = () => {
   return (
     <>
@@ -53,9 +55,15 @@ const Intro = () => {
       </main>
       <Outlet />
     </>
+<<<<<<< HEAD
+  };
+  
+  export default Intro;
+=======
   );
 };
 
 export default Intro;
 
 //   const effectText =
+>>>>>>> 101b8133516c5c1d68dd1fc98588036b8693f236
