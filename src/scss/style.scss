@@ -1,5 +1,5 @@
 @function pxToVw($px) {
-  @return $px / 1920 * 100vw;
+  @return calc($px / 1920 * 100vw);
 }
 
 * {
@@ -733,35 +733,25 @@ header {
 
 // -- 로그인 페이지
 
-// 배경 색상
-.login-main{
-  width: pxToVw(1950);
-  height: pxToVw(760);
-  position: absolute;
-  background-color:#fcfff9;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 // 로그인 박스
 .login-outbox{
-  width: pxToVw(600);
-  height: pxToVw(500);
-  margin-top: pxToVw(-100);
-  background-color: rgba(237, 252, 155, 0.824);
+  width: pxToVw(550);
+  height: pxToVw(550);
+  background-color: rgba(226, 226, 226, 0.212);
   border-radius: 10px;
-  box-shadow: 2px 2px rgba(128, 128, 128, 0.459)
+  box-shadow: 2px 2px rgba(128, 128, 128, 0.459);
+  margin:auto;
 }
 // 로그인 로고 박스
 .login-logobox{
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: pxToVw(70);
+  margin-top: pxToVw(60);
 }
 .login-logo-font{
   font-size: pxToVw(50);
-  margin-left: pxToVw(-10);
+  margin-top: pxToVw(50);
   font-weight: 100;
 }
 // 아이디 입력
@@ -770,17 +760,17 @@ header {
   height: pxToVw(50);
   width: pxToVw(400);
   display: flex;
-  margin-left: pxToVw(90);
-  margin-top: pxToVw(100);
   border: none;
   border-radius: 10px;
   box-shadow: 1px 1px 1px 1px inset rgba(128, 128, 128, 0.568);
+  margin: auto;
+  margin-top: pxToVw(150);
 }
 // 다음 버튼
 .login-next-btn{
   height: pxToVw(50);
   width: pxToVw(400);
-  margin-left: pxToVw(90);
+  margin-left: pxToVw(80);
   display: flex;
   margin-top: pxToVw(20);
   background-color: #4EAAFF;
@@ -796,16 +786,19 @@ header {
 // 회원가입 버튼
 .login-join-membership-btn{
   position: absolute;
-  margin-left: pxToVw(-10);
-  margin-top: pxToVw(600);
+  margin-left: pxToVw(930);
+  margin-top: pxToVw(30);
   background: none;
   border: none;
   font-size: pxToVw(20);
   color: rgb(71, 71, 253);
 }
+<<<<<<< Updated upstream
 // .login-join-membership-btn:hover{
   
 // }
+=======
+>>>>>>> Stashed changes
 .close-bot {
   font-size: pxToVw(40);
   color: white;
@@ -817,11 +810,38 @@ header {
     cursor: pointer;
   }
 }
-
 .dY {
   display: block;
 }
-
 .dN {
   display: none;
 }
+<<<<<<< Updated upstream
+=======
+// 회원가입 페이지 박스
+.membership-outbox{
+  margin-left: pxToVw(690);
+    // 회원가입 폰트
+  .membership-inbox{
+    width: pxToVw(550);
+    height: pxToVw(50);
+    border: 1px solid red;
+    font-size: pxToVw(15);
+    text-align: center;
+    margin-top: pxToVw(50);
+    }
+  // 회원가입 입력 박스
+  .membership-main{
+    width: pxToVw(550);
+    height: pxToVw(550);
+    margin-top: pxToVw(-150);
+    background-color:rgba(226, 226, 226, 0.212);
+    border-radius: 10px;
+    box-shadow: 2px 2px rgba(128, 128, 128, 0.459);
+  }
+
+  // .login-logobox{
+
+  // }
+}
+>>>>>>> Stashed changes
