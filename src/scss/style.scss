@@ -138,7 +138,7 @@ main {
   height: pxToVw(600);
   margin-top: pxToVw(50);
 
-  .each-slide-effect>div {
+  .each-slide-effect > div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -169,7 +169,7 @@ main {
     align-items: center;
     float: left;
 
-    &>*:link {
+    & > *:link {
       font-size: pxToVw(30);
       font-weight: bold;
       cursor: pointer;
@@ -189,7 +189,7 @@ main {
     }
   }
 
-  .pro_list_wrap>p {
+  .pro_list_wrap > p {
     cursor: pointer;
   }
 
@@ -209,7 +209,7 @@ main {
       align-content: center;
       justify-content: space-around;
 
-      &>*:link {
+      & > *:link {
         text-decoration: none;
       }
 
@@ -244,7 +244,7 @@ main {
     align-items: center;
     justify-content: space-between;
 
-    &>p {
+    & > p {
       cursor: pointer;
     }
   }
@@ -252,7 +252,7 @@ main {
 
 // 행사 페이지 CSS
 .event-main {
-  &>article>*:link {
+  & > article > *:link {
     text-decoration: none;
   }
 
@@ -261,12 +261,12 @@ main {
     height: pxToVw(50);
     margin-left: pxToVw(260);
 
-    &>i {
+    & > i {
       font-size: pxToVw(50);
       float: left;
     }
 
-    &>p {
+    & > p {
       height: pxToVw(50);
       line-height: 1.6;
       margin-left: pxToVw(10);
@@ -283,17 +283,17 @@ main {
     margin: pxToVw(15) auto;
     justify-content: space-between;
 
-    &>div {
+    & > div {
       width: pxToVw(400);
       height: pxToVw(340);
       cursor: pointer;
 
-      &>img {
+      & > img {
         width: pxToVw(400);
         height: pxToVw(250);
       }
 
-      &>p {
+      & > p {
         font-size: pxToVw(20);
       }
     }
@@ -316,19 +316,18 @@ main {
 
 // 전체 행사 페이지 CSS
 .event-all-main {
-
   article {
     .text-box {
       width: pxToVw(200);
       height: pxToVw(50);
       margin-left: pxToVw(135);
 
-      &>i {
+      & > i {
         font-size: pxToVw(50);
         float: left;
       }
 
-      &>p {
+      & > p {
         height: pxToVw(50);
         line-height: 1.6;
         margin-left: pxToVw(10);
@@ -338,7 +337,7 @@ main {
       }
     }
 
-    &>section {
+    & > section {
       width: pxToVw(1700);
       height: pxToVw(800);
       margin: pxToVw(15) auto;
@@ -358,12 +357,12 @@ main {
           height: pxToVw(350);
           cursor: pointer;
 
-          &>img {
+          & > img {
             width: pxToVw(370);
             height: pxToVw(250);
           }
 
-          &>p {
+          & > p {
             font-size: pxToVw(20);
           }
         }
@@ -399,12 +398,21 @@ main {
   }
 }
 
+@keyframes slideOut {
+  from {
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: translate(100%, -50%);
+  }
+}
+
 .chatting-section {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation: slideRightToLeft 1s forwards;
+  // animation: slideRightToLeft 1s forwards;
   width: pxToVw(1300);
   height: pxToVw(900);
   margin: pxToVw(15) auto pxToVw(60);
@@ -412,6 +420,13 @@ main {
   border-radius: 30px;
   box-sizing: border-box;
   padding: pxToVw(35) pxToVw(50);
+}
+
+.in-bot {
+  animation: slideRightToLeft 1s forwards;
+}
+.out-bot {
+  animation: slideOut 1s forwards;
 }
 
 .chatting-h1 {
@@ -491,8 +506,100 @@ main {
   background-color: #7166c6;
 }
 
+<<<<<<< HEAD
+// -- 로그인 페이지
+
+// 배경 색상
+.login-main{
+  width: pxToVw(1950);
+  height: pxToVw(760);
+  position: absolute;
+  background-color:#fcfff9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+// 로그인 박스
+.login-outbox{
+  width: pxToVw(600);
+  height: pxToVw(500);
+  margin-top: pxToVw(-100);
+  background-color: rgba(237, 252, 155, 0.824);
+  border-radius: 10px;
+  box-shadow: 2px 2px rgba(128, 128, 128, 0.459)
+}
+// 로그인 로고 박스
+.login-logobox{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: pxToVw(70);
+}
+.login-logo-font{
+  font-size: pxToVw(50);
+  margin-left: pxToVw(-10);
+  font-weight: 100;
+}
+// 아이디 입력
+.login-input-textbox{
+  text-align: center;
+  height: pxToVw(50);
+  width: pxToVw(400);
+  display: flex;
+  margin-left: pxToVw(90);
+  margin-top: pxToVw(100);
+  border: none;
+  border-radius: 10px;
+  box-shadow: 1px 1px 1px 1px inset rgba(128, 128, 128, 0.568);
+}
+// 다음 버튼
+.login-next-btn{
+  height: pxToVw(50);
+  width: pxToVw(400);
+  margin-left: pxToVw(90);
+  display: flex;
+  margin-top: pxToVw(20);
+  background-color: #4EAAFF;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: pxToVw(20);
+  border-radius: 10px;
+  color: aliceblue;
+  box-shadow: 1px 1px rgba(155, 155, 155, 0.555);
+}
+// 회원가입 버튼
+.login-join-membership-btn{
+  position: absolute;
+  margin-left: pxToVw(-10);
+  margin-top: pxToVw(600);
+  background: none;
+  border: none;
+  font-size: pxToVw(20);
+  color: rgb(71, 71, 253);
+}
+// .login-join-membership-btn:hover{
+  
+// }
+=======
 .close-bot {
   font-size: pxToVw(40);
   color: white;
   float: right;
 }
+
+.hover-cursor {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.dY {
+  display: block;
+}
+
+.dN {
+  display: none;
+}
+>>>>>>> 101b8133516c5c1d68dd1fc98588036b8693f236
