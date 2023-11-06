@@ -1,7 +1,7 @@
 import { React, useState } from 'react';
 import { Outlet, Link, useLocation } from "react-router-dom";
 
-const Pro = () => {
+const Pro = (props) => {
   const location = useLocation();
   const splitUrl = location.pathname.split('/');
   const Index = parseInt(splitUrl[splitUrl.length - 1]);
