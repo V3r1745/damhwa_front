@@ -5,7 +5,7 @@ import 'react-slideshow-image/dist/styles.css';
 const btns = {
   prevArrow: <i id="left_btn" style={{margin: "20px"}} className="fa-solid fa-chevron-left" />,
   nextArrow: <i id="right_btn" style={{margin: "20px"}} className="fa-solid fa-chevron-right" />,
-  pauseOnHover: "false"
+  pauseOnHover: false
 }
 
 const ProHome = () => {

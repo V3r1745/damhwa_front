@@ -6,14 +6,33 @@ const ProDetail = () => {
   const [currentPrice, setPrice] = useState(inProPrice);
   const minusBtn = () => {
     if (currentCount > 1) {
-      setCount(currentCount - 1);
-      setPrice(inProPrice * (currentCount - 1));
+      setCount(parseInt(currentCount) - 1);
+      setPrice(inProPrice * (parseInt(currentCount) - 1));
     }
   }
   const plusBtn = () => {
     if (currentCount < 10) {
-      setCount(currentCount + 1)
-      setPrice(inProPrice * (currentCount + 1));
+      setCount(parseInt(currentCount) + 1)
+      setPrice(inProPrice * (parseInt(currentCount) + 1));
+    }
+  }
+  const inputCount = (e) => {
+    if( e.target.value <= 10 || e.target.value === "") {
+      if (e.target.value !== "" && e.target.value > 0) {
+        setCount(e.target.value)
+        setPrice(inProPrice * e.target.value);
+      } else {
+        setCount("")
+      }
+    } else if ( e.target.value > 10) {
+      setCount(10)
+      setPrice(inProPrice * 10);
+    }
+  }
+  const blurCount = (e) => {
+    if( e.target.value === "" ) {
+      setCount(1);
+      setPrice(inProPrice * 1);
     }
   }
   return <section className="pro-detail-section">
@@ -34,7 +53,7 @@ const ProDetail = () => {
       </div>
       <div className="count-box">
         <div onClick={minusBtn} className="minus-btn">-</div>
-        <input type="number" className="current-Count" value={currentCount} onChange={() => {setCount(currentCount)}} />
+        <input type="text" className="current-Count" value={currentCount} onChange={inputCount} onBlur={blurCount}/>
         <div onClick={plusBtn} className="plus-btn">+</div>
       </div>
       <div className="purchase-box">
