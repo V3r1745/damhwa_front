@@ -1,5 +1,5 @@
 @function pxToVw($px) {
-  @return calc($px / 1920 * 100vw);
+  @return $px / 1920 * 100vw;
 }
 
 * {
@@ -748,11 +748,11 @@ header {
   align-items: center;
   justify-content: center;
   margin-top: pxToVw(60);
-}
-.login-logo-font{
-  font-size: pxToVw(50);
-  margin-top: pxToVw(50);
-  font-weight: 100;
+    &>h1 {
+      font-size: pxToVw(50);
+      margin-top: pxToVw(50);
+      font-weight: 100;
+  }
 }
 // 아이디 입력
 .login-input-textbox{
@@ -793,12 +793,7 @@ header {
   font-size: pxToVw(20);
   color: rgb(71, 71, 253);
 }
-<<<<<<< Updated upstream
-// .login-join-membership-btn:hover{
   
-// }
-=======
->>>>>>> Stashed changes
 .close-bot {
   font-size: pxToVw(40);
   color: white;
@@ -816,8 +811,6 @@ header {
 .dN {
   display: none;
 }
-<<<<<<< Updated upstream
-=======
 // 회원가입 페이지 박스
 .membership-outbox{
   margin-left: pxToVw(690);
@@ -828,20 +821,23 @@ header {
     border: 1px solid red;
     font-size: pxToVw(15);
     text-align: center;
-    margin-top: pxToVw(50);
+    margin-top: pxToVw(70);
+    // margin-bottom: pxToVw(30);
     }
   // 회원가입 입력 박스
   .membership-main{
     width: pxToVw(550);
     height: pxToVw(550);
-    margin-top: pxToVw(-150);
+    margin-top: pxToVw(-100);
     background-color:rgba(226, 226, 226, 0.212);
     border-radius: 10px;
     box-shadow: 2px 2px rgba(128, 128, 128, 0.459);
+    &>input{
+      
+    }
   }
 
   // .login-logobox{
 
   // }
 }
->>>>>>> Stashed changes
