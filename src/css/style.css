@@ -546,7 +546,6 @@ header {
     font-weight: 100; }
 
 .login-input-textbox {
-  text-align: center;
   height: 2.6041666667vw;
   width: 20.8333333333vw;
   display: flex;
@@ -554,12 +553,19 @@ header {
   border-radius: 10px;
   box-shadow: 1px 1px 1px 1px inset rgba(128, 128, 128, 0.568);
   margin: auto;
-  margin-top: 7.8125vw; }
+  margin-top: 6.25vw;
+  transition: box-shadow 0.1s;
+  padding-left: 0.5208333333vw;
+  box-sizing: border-box;
+  box-shadow: inset 0 0 0vw 0vw black, 0 0 0.2604166667vw 0.0520833333vw; }
+  .login-input-textbox:focus {
+    box-shadow: inset 0 0 0.3645833333vw 0.0520833333vw black, 0 0 0vw 0vw;
+    outline: none; }
 
 .login-next-btn {
   height: 2.6041666667vw;
   width: 20.8333333333vw;
-  margin-left: 4.1666666667vw;
+  margin: auto;
   display: flex;
   margin-top: 1.0416666667vw;
   background-color: #4EAAFF;
@@ -596,20 +602,52 @@ header {
   display: none; }
 
 .membership-outbox {
-  margin-left: 35.9375vw; }
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
   .membership-outbox .membership-inbox {
     width: 28.6458333333vw;
     height: 2.6041666667vw;
-    border: 1px solid red;
-    font-size: 0.78125vw;
+    font-size: 1.3020833333vw;
     text-align: center;
-    margin-top: 3.6458333333vw; }
+    margin-bottom: 1.5625vw;
+    margin-top: -1.5625vw; }
   .membership-outbox .membership-main {
     width: 28.6458333333vw;
     height: 28.6458333333vw;
-    margin-top: -5.2083333333vw;
     background-color: rgba(226, 226, 226, 0.212);
     border-radius: 10px;
-    box-shadow: 2px 2px rgba(128, 128, 128, 0.459); }
+    box-shadow: 2px 2px rgba(128, 128, 128, 0.459);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+    .membership-outbox .membership-main > input {
+      height: 2.6041666667vw;
+      width: 20.8333333333vw;
+      display: flex;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 1px 1px 1px 1px inset rgba(128, 128, 128, 0.568);
+      margin: auto;
+      font-size: 1.3020833333vw;
+      margin-bottom: 1.0416666667vw;
+      padding-left: 0.5208333333vw; }
+
+.member-next-btn {
+  height: 2.6041666667vw;
+  width: 20.8333333333vw;
+  margin: auto;
+  display: flex;
+  margin-top: 2.0833333333vw;
+  background-color: #4EAAFF;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.0416666667vw;
+  border-radius: 10px;
+  color: aliceblue;
+  box-shadow: 1px 1px rgba(155, 155, 155, 0.555); }
 
 /*# sourceMappingURL=style.css.map */

@@ -756,7 +756,6 @@ header {
 }
 // 아이디 입력
 .login-input-textbox{
-  text-align: center;
   height: pxToVw(50);
   width: pxToVw(400);
   display: flex;
@@ -764,13 +763,21 @@ header {
   border-radius: 10px;
   box-shadow: 1px 1px 1px 1px inset rgba(128, 128, 128, 0.568);
   margin: auto;
-  margin-top: pxToVw(150);
+  margin-top: pxToVw(120);
+  transition: box-shadow 0.1s;
+  padding-left: pxToVw(10);
+  box-sizing: border-box;
+  box-shadow: inset 0 0 pxToVw(0) pxToVw(0) black, 0 0 pxToVw(5) pxToVw(1);
+  &:focus {
+    box-shadow: inset 0 0 pxToVw(7) pxToVw(1) black, 0 0 pxToVw(0) pxToVw(0);
+    outline: none;
+  }
 }
 // 다음 버튼
 .login-next-btn{
   height: pxToVw(50);
   width: pxToVw(400);
-  margin-left: pxToVw(80);
+  margin: auto;
   display: flex;
   margin-top: pxToVw(20);
   background-color: #4EAAFF;
@@ -813,31 +820,58 @@ header {
 }
 // 회원가입 페이지 박스
 .membership-outbox{
-  margin-left: pxToVw(690);
+  // margin-left: pxToVw(690);
+  // margin: auto;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
     // 회원가입 폰트
   .membership-inbox{
     width: pxToVw(550);
     height: pxToVw(50);
-    border: 1px solid red;
-    font-size: pxToVw(15);
+    font-size: pxToVw(25);
     text-align: center;
-    margin-top: pxToVw(70);
-    // margin-bottom: pxToVw(30);
+    margin-bottom: pxToVw(30);
+    margin-top: pxToVw(-30);
     }
   // 회원가입 입력 박스
   .membership-main{
     width: pxToVw(550);
     height: pxToVw(550);
-    margin-top: pxToVw(-100);
     background-color:rgba(226, 226, 226, 0.212);
     border-radius: 10px;
     box-shadow: 2px 2px rgba(128, 128, 128, 0.459);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     &>input{
-      
+      height: pxToVw(50);
+      width: pxToVw(400);
+      display: flex;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 1px 1px 1px 1px inset rgba(128, 128, 128, 0.568);
+      margin: auto;
+      font-size: pxToVw(25);
+      margin-bottom: pxToVw(20);
+      padding-left: pxToVw(10);
     }
   }
-
-  // .login-logobox{
-
-  // }
+}
+.member-next-btn{
+  height: pxToVw(50);
+  width: pxToVw(400);
+  margin: auto;
+  display: flex;
+  margin-top: pxToVw(40);
+  background-color: #4EAAFF;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: pxToVw(20);
+  border-radius: 10px;
+  color: aliceblue;
+  box-shadow: 1px 1px rgba(155, 155, 155, 0.555);
 }

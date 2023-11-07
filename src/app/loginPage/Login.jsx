@@ -17,12 +17,12 @@ const Login = () => {
                 </article>
                 <div>
                     <input className='login-input-textbox' type="text" placeholder="아이디 또는 연락처를 입력해주세요."/>
-                    <button className='login-next-btn'>다음</button>
+                    <button className='login-next-btn hover-cursor'>다음</button>
                 </div>
             </section>
             {/* 회원가입 박스 */}
             <Link to="/membership">
-                <button className='login-join-membership-btn'>회원가입</button>
+                <button className='login-join-membership-btn hover-cursor'>회원가입</button>
             </Link>
             {/* <Link to="/pro">상점</Link> */}
         </main>

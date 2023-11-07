@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     proxy: {
       "/chat": {
-        target: "http://localhost:10150/chat",
+        target: " http://13.125.14.153:10150/chat",
         changeOrigin: true,
         rewrite: (path) => {
           return path.replace(/^\/chat/, "");
