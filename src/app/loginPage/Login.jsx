@@ -3,8 +3,9 @@ import { React, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { NotificationManager } from "react-notifications";
+import { connect } from "react-redux";
 
-const Login = () => {
+const Login = (props) => {
   const navigate = useNavigate();
   const [inputId, setInputId] = useState("");
   const [inputPw, setInputPw] = useState("");
@@ -28,6 +29,7 @@ const Login = () => {
     if (result.data?.result === true) {
       navigate(-1);
       NotificationManager.success("로그인!", "로그인 되었습니다!", 3000);
+      props.dispatch({type: "login/FETCH_LOGIN", login: true})
     } else {
       NotificationManager.error("오류", "아이디와 비밀번호를 확인하세요", 5000);
     }
@@ -102,4 +104,4 @@ const Login = () => {
   }
 };
 
-export default Login;
+export default connect(state => state)(Login);

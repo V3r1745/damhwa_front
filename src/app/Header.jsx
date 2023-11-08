@@ -4,11 +4,16 @@ import ChatBot from "./bot/ChatBot";
 import Bot from "./bot/Bot";
 import { NotificationContainer } from "react-notifications";
 import "react-notifications/lib/notifications.css";
+import { connect } from "react-redux";
 
 class Header extends React.Component {
   constructor(props) {
     super(props);
     this.state = { bot: false, single: false };
+    this.logout = this.logout.bind(this);
+  }
+  logout() {
+    this.props.dispatch({ type: "login/FETCH_LOGIN", login: false });
   }
   render() {
     console.log(this.props);
@@ -29,10 +34,18 @@ class Header extends React.Component {
             <i className="xi-recording" />
             <Link to="/faq">FAQ</Link>
             <i className="xi-recording" />
-            <Link to="/login">로그인</Link>
-            <Link to="/cart">
-              <i className="xi-cart" />
-            </Link>
+            {this.props.login.login ? (
+              <Link onClick={this.logout}>로그아웃</Link>
+            ) : (
+              <Link to="/login">로그인</Link>
+            )}
+            {this.props.login.login ? (
+              <Link to="/cart">
+                <i className="xi-cart" />
+              </Link>
+            ) : (
+              <></>
+            )}
           </div>
         </header>
         <Outlet />
@@ -48,4 +61,4 @@ class Header extends React.Component {
   }
 }
 
-export default Header;
+export default connect((state) => state)(Header);
