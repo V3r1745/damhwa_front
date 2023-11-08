@@ -1,7 +1,9 @@
 import React from "react";
-import { Outlet, Link, useNavigate } from "react-router-dom";
+import { Outlet, Link } from "react-router-dom";
 import ChatBot from "./bot/ChatBot";
 import Bot from "./bot/Bot";
+import { NotificationContainer } from "react-notifications";
+import "react-notifications/lib/notifications.css";
 
 class Header extends React.Component {
   constructor(props) {
@@ -28,7 +30,9 @@ class Header extends React.Component {
             <Link to="/faq">FAQ</Link>
             <i className="xi-recording" />
             <Link to="/login">로그인</Link>
-            <Link to="/cart"><i className="xi-cart" /></Link>
+            <Link to="/cart">
+              <i className="xi-cart" />
+            </Link>
           </div>
         </header>
         <Outlet />
@@ -38,6 +42,7 @@ class Header extends React.Component {
           single={this.state.single}
           headerThis={this}
         />
+        <NotificationContainer />
       </>
     );
   }
