@@ -34,6 +34,13 @@ export default defineConfig({
           return path.replace(/^\/create/, "");
         },
       },
+      "/pro": {
+        target: "http://localhost:10149/api/product/",
+        changeOrigin: true,
+        rewrite: (path) => {
+          return path.replace(/^\/pro/, "");
+        },
+      },
     },
   },
 });

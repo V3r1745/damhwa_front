@@ -1,9 +1,13 @@
-import { React, useState } from 'react';
+import { React, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import CartElements from "./CartElement";
+import { connect } from "react-redux";
 
-const CartPage = () => {
+const CartPage = (props) => {
   const elements = CartElements();
-  return <>
+  const navigate = useNavigate()
+  props.login.login === false && navigate("/login");
+  return (
     <main className="cart-main">
       <article>
         <section className="cart-top-section">
@@ -18,9 +22,7 @@ const CartPage = () => {
             <p className="cart-pro-count">수량</p>
             <p className="cart-pro-total">총계</p>
           </div>
-          <div className="cart-list-wrap">
-            {elements}
-          </div>
+          <div className="cart-list-wrap">{elements}</div>
         </section>
         <section className="cart-bot-section">
           <div className="cart-total-box">
@@ -34,7 +36,7 @@ const CartPage = () => {
         </section>
       </article>
     </main>
-  </>
-}
+  );
+};
 
-export default CartPage;
+export default connect((state) => state)(CartPage);

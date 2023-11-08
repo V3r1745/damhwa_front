@@ -1,19 +1,38 @@
+import axios from "axios";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useOutletContext } from "react-router-dom";
+import ProElement from "./ProElement";
 
 const Kitchen = () => {
-  const currentPage = useOutletContext();
-  const kitchenData = { "kitchen": ["주방 3종 세트 (샤워볼, 바디워시, 때타올)", "친환경 주방 용품 (세제, 청소 클리너) 4종세트", "주방에서 함께하는 세제 (700ml)", "주방을 걸어요(고체 핸드워시 & 칫솔세트)"], "price": ["20,000원", "22,000원", "31,000원", "14900원"], "page": ["1", "2", "3"] };
-  let kitchenElement = kitchenData["kitchen"].map((v, i) => <Link key={i} to={`${currentPage.location}/${i}`} >
-    <div className="pro-content-each">
-      <img className="pro-each-img" src="/" />
-      <p className="pro-each-price">{kitchenData["price"][i]}</p>
-      <p className="pro-each-text">{v}</p>
-    </div>
-  </Link >);
-  return <section className="pro-section">
-  {kitchenElement}
-</section>
+  const context = useOutletContext();
+  const [fetchElement, setFetchElement] = useState([]);
+  useEffect(() => {
+    (async () => {
+      const result = await axios.get(
+        `/pro?type=4&page=${context.location.at(-1)}`
+      );
+      console.log(result.data);
+      setFetchElement([...result.data]);
+    })();
+  }, [context]);
+
+  return (
+    <section className="pro-section">
+      {fetchElement.map((v) => {
+        return (
+          <ProElement
+            key={v.pk}
+            id={v.pk}
+            location={location.href}
+            price={v.fields.product_price}
+            title={v.fields.product_title}
+            img={v.product_main_img}
+          />
+        );
+      })}
+    </section>
+  );
 };
 
 export default Kitchen;
