@@ -18,7 +18,6 @@ const ProHome = () => {
     <div style={{ 'backgroundImage': `url(${v})` }}></div>
   </div>
   )
-  console.log(slider)
   return <>
     <Slide {...btns}>
       {slider}
