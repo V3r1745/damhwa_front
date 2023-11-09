@@ -2,7 +2,8 @@
   @return $px / 1920 * 100vw;
 }
 
-html,body {
+html,
+body {
   width: 100%;
   overflow-x: hidden;
 }
@@ -79,14 +80,14 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
-  
+
     // 설립취지 폰트박스
     .effect-box {
       height: pxToVw(200);
       width: pxToVw(800);
       padding-top: pxToVw(40);
     }
-  
+
     // 설립목표 폰트박스
     .target-box {
       height: pxToVw(200);
@@ -131,7 +132,7 @@ header {
   height: pxToVw(600);
   margin-top: pxToVw(50);
 
-  .each-slide-effect > div {
+  .each-slide-effect>div {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -196,13 +197,14 @@ header {
     }
   }
 
-  .pro_list_wrap > p {
+  .pro_list_wrap>p {
     cursor: pointer;
   }
 
   article {
     width: pxToVw(1570);
     height: pxToVw(925);
+    overflow-y: hidden;
     float: left;
 
     .pro-slide-effect>div {
@@ -218,7 +220,7 @@ header {
       width: pxToVw(1570);
       height: pxToVw(525);
     }
-  
+
     & i {
       color: #ddd;
       font-size: pxToVw(50);
@@ -226,15 +228,15 @@ header {
 
     .pro-section {
       width: pxToVw(1300);
-      height: pxToVw(895);
-      margin: 0 auto;
+      height: pxToVw(835);
+      margin: pxToVw(30) auto 0;
       display: flex;
       flex-wrap: wrap;
       flex-direction: row;
       align-items: center;
       align-content: center;
       justify-content: space-around;
-      
+
       &>*:link {
         text-decoration: none;
       }
@@ -251,14 +253,18 @@ header {
 
         &>.pro-each-text {
           width: pxToVw(450);
-          height: pxToVw(60);
+          height: pxToVw(30);
           font-size: pxToVw(20);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
         }
 
-        &>.pro-each-price {
+        .pro-each-price-box {
           width: pxToVw(450);
           height: pxToVw(30);
-          text-align: left;
+          display: flex;
+          justify-content: flex-end;
           font-size: pxToVw(20);
           font-weight: bold;
         }
@@ -308,11 +314,12 @@ header {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        justify-content: flex-end;
         align-content: flex-start;
 
         .pro-name {
           width: pxToVw(600);
-          height: pxToVw(230);
+          height: pxToVw(300);
           padding: pxToVw(15);
           font-size: pxToVw(25);
           font-weight: bold;
@@ -320,7 +327,7 @@ header {
 
         .price-box {
           width: pxToVw(590);
-          height: pxToVw(70);
+          height: pxToVw(60);
           padding-right: pxToVw(10);
           font-size: pxToVw(30);
           font-weight: bold;
@@ -332,7 +339,7 @@ header {
 
         .count-box {
           width: pxToVw(190);
-          height: pxToVw(70);
+          height: pxToVw(110);
           margin-left: pxToVw(10);
           display: flex;
           align-items: center;
@@ -361,10 +368,43 @@ header {
             outline: none;
           }
         }
+      }
+
+      .pro-description {
+        width: pxToVw(1160);
+        height: pxToVw(150);
+        font-size: pxToVw(20);
+        padding: pxToVw(20) pxToVw(20);
+        border-radius: pxToVw(20);
+        background: #efefef;
+      }
+
+      .price-result-box {
+        width: pxToVw(1200);
+        height: pxToVw(70);
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        .price-total-box {
+          width: pxToVw(300);
+          height: pxToVw(60);
+          font-size: pxToVw(30);
+          font-weight: bold;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+
+          .pro-total-price-box {
+            display: flex;
+            align-items: center;
+            margin-right: pxToVw(10);
+          }
+        }
 
         .purchase-box {
           width: pxToVw(400);
-          height: pxToVw(70);
+          height: pxToVw(60);
           display: flex;
           font-size: pxToVw(20);
           align-items: center;
@@ -389,15 +429,6 @@ header {
             background: #54C152;
           }
         }
-      }
-
-      .pro-description {
-        width: pxToVw(1160);
-        height: pxToVw(160);
-        font-size: pxToVw(20);
-        padding: pxToVw(20) pxToVw(20);
-        border-radius: pxToVw(20);
-        background: #efefef;
       }
     }
 
@@ -431,7 +462,7 @@ header {
     align-items: center;
     justify-content: space-between;
 
-    & > p {
+    &>p {
       cursor: pointer;
     }
   }
@@ -439,7 +470,7 @@ header {
 
 // 행사 페이지 CSS
 .event-main {
-  & > article > *:link {
+  &>article>*:link {
     text-decoration: none;
   }
 
@@ -448,12 +479,12 @@ header {
     height: pxToVw(50);
     margin-left: pxToVw(260);
 
-    & > i {
+    &>i {
       font-size: pxToVw(50);
       float: left;
     }
 
-    & > p {
+    &>p {
       height: pxToVw(50);
       line-height: 1.6;
       margin-left: pxToVw(10);
@@ -470,12 +501,12 @@ header {
     margin: pxToVw(15) auto;
     justify-content: space-between;
 
-    & > div {
+    &>div {
       width: pxToVw(400);
       height: pxToVw(340);
       cursor: pointer;
 
-      & > img {
+      &>img {
         width: pxToVw(400);
         height: pxToVw(250);
       }
@@ -515,12 +546,12 @@ header {
       height: pxToVw(50);
       margin-left: pxToVw(135);
 
-      & > i {
+      &>i {
         font-size: pxToVw(50);
         float: left;
       }
 
-      & > p {
+      &>p {
         height: pxToVw(50);
         line-height: 1.6;
         margin-left: pxToVw(10);
@@ -530,7 +561,7 @@ header {
       }
     }
 
-    & > section {
+    &>section {
       width: pxToVw(1700);
       height: pxToVw(800);
       margin: pxToVw(15) auto;
@@ -550,7 +581,7 @@ header {
           height: pxToVw(350);
           cursor: pointer;
 
-          & > img {
+          &>img {
             width: pxToVw(370);
             height: pxToVw(250);
           }
@@ -594,6 +625,7 @@ header {
   from {
     transform: translate(-50%, -50%);
   }
+
   to {
     transform: translate(100%, -50%);
   }
@@ -617,6 +649,7 @@ header {
 .in-bot {
   animation: slideRightToLeft 1s forwards;
 }
+
 .out-bot {
   animation: slideOut 1s forwards;
 }
@@ -727,9 +760,18 @@ header {
 }
 
 @keyframes gptMessageDisapper {
-  0%   { opacity: 1; }
-  90%   { opacity: 1; }
-  100% { opacity: 0; display: none; }
+  0% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    display: none;
+  }
 }
 
 .user-color {
@@ -739,28 +781,31 @@ header {
 // -- 로그인 페이지
 
 // 로그인 박스
-.login-outbox{
+.login-outbox {
   width: pxToVw(550);
   height: pxToVw(550);
   background-color: rgba(226, 226, 226, 0.212);
   border-radius: 10px;
   box-shadow: 2px 2px rgba(128, 128, 128, 0.459);
-  margin:auto;
+  margin: auto;
 }
+
 // 로그인 로고 박스
-.login-logobox{
+.login-logobox {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: pxToVw(60);
-    &>h1 {
-      font-size: pxToVw(50);
-      margin-top: pxToVw(50);
-      font-weight: 100;
+
+  &>h1 {
+    font-size: pxToVw(50);
+    margin-top: pxToVw(50);
+    font-weight: 100;
   }
 }
+
 // 아이디 입력
-.login-input-textbox{
+.login-input-textbox {
   height: pxToVw(50);
   width: pxToVw(400);
   display: flex;
@@ -773,13 +818,15 @@ header {
   padding-left: pxToVw(10);
   box-sizing: border-box;
   box-shadow: inset 0 0 pxToVw(0) pxToVw(0) black, 0 0 pxToVw(5) pxToVw(1);
+
   &:focus {
     box-shadow: inset 0 0 pxToVw(7) pxToVw(1) black, 0 0 pxToVw(0) pxToVw(0);
     outline: none;
   }
 }
+
 // 다음 버튼
-.login-next-btn{
+.login-next-btn {
   height: pxToVw(50);
   width: pxToVw(400);
   margin: auto;
@@ -795,8 +842,9 @@ header {
   color: aliceblue;
   box-shadow: 1px 1px rgba(155, 155, 155, 0.555);
 }
+
 // 회원가입 버튼
-.login-join-membership-btn{
+.login-join-membership-btn {
   position: absolute;
   margin-left: pxToVw(930);
   margin-top: pxToVw(30);
@@ -805,7 +853,7 @@ header {
   font-size: pxToVw(20);
   color: rgb(71, 71, 253);
 }
-  
+
 // }
 
 // 장바구니 페이지
@@ -902,6 +950,7 @@ header {
           height: pxToVw(60);
         }
       }
+
       .cart-list-wrap {
         width: pxToVw(1400);
 
@@ -938,7 +987,7 @@ header {
               width: pxToVw(90);
               height: pxToVw(90);
             }
-  
+
             .cart-each-name {
               width: pxToVw(290);
               height: pxToVw(80);
@@ -995,6 +1044,7 @@ header {
               outline: none;
             }
           }
+
           .cart-each-total-box {
             width: pxToVw(200);
             height: pxToVw(100);
@@ -1018,6 +1068,7 @@ header {
         }
       }
     }
+
     .cart-bot-section {
       width: pxToVw(1400);
       height: pxToVw(107);
@@ -1034,7 +1085,7 @@ header {
         justify-content: flex-end;
         font-size: pxToVw(30);
         font-weight: bold;
-        
+
         .cart-total-text {
           width: pxToVw(200);
           height: pxToVw(40);
@@ -1048,7 +1099,7 @@ header {
           justify-content: flex-end;
           font-size: pxToVw(30);
           font-weight: bold;
-          
+
           .cart-total {
             width: pxToVw(150);
             height: pxToVw(40);
@@ -1074,7 +1125,7 @@ header {
         border: pxToVw(2) solid #aaa;
         border-radius: pxToVw(5);
         cursor: pointer;
-  
+
         &:active {
           background: #d2ebcd;
         }
@@ -1094,40 +1145,46 @@ header {
     cursor: pointer;
   }
 }
+
 .dY {
   display: block;
 }
+
 .dN {
   display: none;
 }
+
 // 회원가입 페이지 박스
-.membership-outbox{
+.membership-outbox {
   // margin-left: pxToVw(690);
   // margin: auto;
   position: absolute;
   top: 60%;
   left: 50%;
   transform: translate(-50%, -50%);
-    // 회원가입 폰트
-  .membership-inbox{
+
+  // 회원가입 폰트
+  .membership-inbox {
     width: pxToVw(550);
     height: pxToVw(50);
     font-size: pxToVw(25);
     text-align: center;
     margin-bottom: pxToVw(30);
     margin-top: pxToVw(-30);
-    }
+  }
+
   // 회원가입 입력 박스
-  .membership-main{
+  .membership-main {
     width: pxToVw(550);
     height: pxToVw(550);
-    background-color:rgba(226, 226, 226, 0.212);
+    background-color: rgba(226, 226, 226, 0.212);
     border-radius: 10px;
     box-shadow: 2px 2px rgba(128, 128, 128, 0.459);
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    &>input{
+
+    &>input {
       height: pxToVw(50);
       width: pxToVw(400);
       display: flex;
@@ -1141,7 +1198,8 @@ header {
     }
   }
 }
-.member-next-btn{
+
+.member-next-btn {
   height: pxToVw(50);
   width: pxToVw(400);
   margin: auto;

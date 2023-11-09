@@ -1,4 +1,5 @@
-html, body {
+html,
+body {
   width: 100%;
   overflow-x: hidden; }
 
@@ -136,6 +137,7 @@ header {
 .pro-main article {
   width: 81.7708333333vw;
   height: 48.1770833333vw;
+  overflow-y: hidden;
   float: left; }
   .pro-main article .pro-slide-effect > div {
     width: 81.7708333333vw;
@@ -152,8 +154,8 @@ header {
     font-size: 2.6041666667vw; }
   .pro-main article .pro-section {
     width: 67.7083333333vw;
-    height: 46.6145833333vw;
-    margin: 0 auto;
+    height: 43.4895833333vw;
+    margin: 1.5625vw auto 0;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -171,12 +173,16 @@ header {
         height: 14.5833333333vw; }
       .pro-main article .pro-section .pro-content-each > .pro-each-text {
         width: 23.4375vw;
-        height: 3.125vw;
-        font-size: 1.0416666667vw; }
-      .pro-main article .pro-section .pro-content-each > .pro-each-price {
+        height: 1.5625vw;
+        font-size: 1.0416666667vw;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap; }
+      .pro-main article .pro-section .pro-content-each .pro-each-price-box {
         width: 23.4375vw;
         height: 1.5625vw;
-        text-align: left;
+        display: flex;
+        justify-content: flex-end;
         font-size: 1.0416666667vw;
         font-weight: bold; }
   .pro-main article .pro-detail-section {
@@ -213,16 +219,17 @@ header {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
+      justify-content: flex-end;
       align-content: flex-start; }
       .pro-main article .pro-detail-section .func-box .pro-name {
         width: 31.25vw;
-        height: 11.9791666667vw;
+        height: 15.625vw;
         padding: 0.78125vw;
         font-size: 1.3020833333vw;
         font-weight: bold; }
       .pro-main article .pro-detail-section .func-box .price-box {
         width: 30.7291666667vw;
-        height: 3.6458333333vw;
+        height: 3.125vw;
         padding-right: 0.5208333333vw;
         font-size: 1.5625vw;
         font-weight: bold;
@@ -232,7 +239,7 @@ header {
         letter-spacing: 0.0520833333vw; }
       .pro-main article .pro-detail-section .func-box .count-box {
         width: 9.8958333333vw;
-        height: 3.6458333333vw;
+        height: 5.7291666667vw;
         margin-left: 0.5208333333vw;
         display: flex;
         align-items: center;
@@ -254,33 +261,51 @@ header {
         .pro-main article .pro-detail-section .func-box .count-box input {
           background: #fff;
           outline: none; }
-      .pro-main article .pro-detail-section .func-box .purchase-box {
+    .pro-main article .pro-detail-section .pro-description {
+      width: 60.4166666667vw;
+      height: 7.8125vw;
+      font-size: 1.0416666667vw;
+      padding: 1.0416666667vw 1.0416666667vw;
+      border-radius: 1.0416666667vw;
+      background: #efefef; }
+    .pro-main article .pro-detail-section .price-result-box {
+      width: 62.5vw;
+      height: 3.6458333333vw;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center; }
+      .pro-main article .pro-detail-section .price-result-box .price-total-box {
+        width: 15.625vw;
+        height: 3.125vw;
+        font-size: 1.5625vw;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; }
+        .pro-main article .pro-detail-section .price-result-box .price-total-box .pro-total-price-box {
+          display: flex;
+          align-items: center;
+          margin-right: 0.5208333333vw; }
+      .pro-main article .pro-detail-section .price-result-box .purchase-box {
         width: 20.8333333333vw;
-        height: 3.6458333333vw;
+        height: 3.125vw;
         display: flex;
         font-size: 1.0416666667vw;
         align-items: center;
         justify-content: space-evenly; }
-        .pro-main article .pro-detail-section .func-box .purchase-box > * {
+        .pro-main article .pro-detail-section .price-result-box .purchase-box > * {
           width: 9.375vw;
           height: 2.6041666667vw;
           text-align: center;
           line-height: 2.6041666667vw;
           border: 0.15625vw solid #aaa;
           cursor: pointer; }
-        .pro-main article .pro-detail-section .func-box .purchase-box .pro-basket {
+        .pro-main article .pro-detail-section .price-result-box .purchase-box .pro-basket {
           color: #399f37;
           border: 0.15625vw solid #54C152; }
-        .pro-main article .pro-detail-section .func-box .purchase-box .pro-purchase {
+        .pro-main article .pro-detail-section .price-result-box .purchase-box .pro-purchase {
           color: #fff;
           background: #54C152; }
-    .pro-main article .pro-detail-section .pro-description {
-      width: 60.4166666667vw;
-      height: 8.3333333333vw;
-      font-size: 1.0416666667vw;
-      padding: 1.0416666667vw 1.0416666667vw;
-      border-radius: 1.0416666667vw;
-      background: #efefef; }
   .pro-main article .page-box {
     width: 10.4166666667vw;
     height: 1.5625vw;

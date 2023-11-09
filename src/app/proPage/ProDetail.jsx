@@ -17,20 +17,20 @@ const ProDetail = () => {
     }
   }
   const inputCount = (e) => {
-    if( e.target.value <= 10 || e.target.value === "") {
+    if (e.target.value <= 10 || e.target.value === "") {
       if (e.target.value !== "" && e.target.value > 0) {
         setCount(e.target.value)
         setPrice(inProPrice * e.target.value);
       } else {
         setCount("")
       }
-    } else if ( e.target.value > 10) {
+    } else if (e.target.value > 10) {
       setCount(10)
       setPrice(inProPrice * 10);
     }
   }
   const blurCount = (e) => {
-    if( e.target.value === "" ) {
+    if (e.target.value === "") {
       setCount(1);
       setPrice(inProPrice * 1);
     }
@@ -48,23 +48,32 @@ const ProDetail = () => {
       <p className="pro-name">자연 친화적 바디워시 3종 세트
         (샤워볼, 바디워시, 때타올)</p>
       <div className="price-box">
-        <p className="pro-price">{currentPrice.toLocaleString()}</p>
+        <p className="pro-price">{inProPrice.toLocaleString()}</p>
         <p className="pro-krw">원</p>
       </div>
       <div className="count-box">
         <div onClick={minusBtn} className="minus-btn">-</div>
-        <input type="text" className="current-Count" value={currentCount} onChange={inputCount} onBlur={blurCount}/>
+        <input type="text" className="current-Count" value={currentCount} onChange={inputCount} onBlur={blurCount} />
         <div onClick={plusBtn} className="plus-btn">+</div>
+      </div>
+    </div>
+    <div className="pro-description">
+      환경 호르몬, 납, 카드뮴 무검출 제품으로 환경 유해 성분을 포함하지 않는 발수처리 방식으로 제작되어 유해물질 없는 친환경 제품입니다.
+    </div>
+    <div className="price-result-box">
+      <div className="price-total-box">
+        <p className="pro-total-text">합계</p>
+        <div className="pro-total-price-box">
+          <p className="pro-total-price">{currentPrice.toLocaleString()}</p>
+          <p className="pro-total-krw">원</p>
+        </div>
       </div>
       <div className="purchase-box">
         <div className="pro-basket">장바구니 담기</div>
         <div className="pro-purchase">구매하기</div>
       </div>
     </div>
-    <div className="pro-description">
-      환경 호르몬, 납, 카드뮴 무검출 제품으로 환경 유해 성분을 포함하지 않는 발수처리 방식으로 제작되어 유해물질 없는 친환경 제품입니다.
-    </div>
-  </section>
+  </section >
 }
 
 export default ProDetail;

@@ -77,7 +77,7 @@ const Pro = (props) => {
             style={{
               display:
                 "/pro" == location.pathname ||
-                /\/pro\/[a-z]+\/[0-9]+\/[0-9]+/.test(location.pathname)
+                  /\/pro\/[a-z]+\/[0-9]+\/[0-9]+/.test(location.pathname)
                   ? "none"
                   : "flex",
             }}
