@@ -75,7 +75,7 @@ const Bot = (props) => {
         waiting();
         const result = await axios.post(
           // `${window.location.origin.replace(`:${window.location.port}`, "")}:10150/chat`,
-          `/chat`,
+          `http://13.125.14.153:10150/chat`,
           {
             chat: JSON.parse(localStorage.getItem("chat")),
           }

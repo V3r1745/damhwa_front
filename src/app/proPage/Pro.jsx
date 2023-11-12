@@ -64,7 +64,7 @@ const Pro = (props) => {
               style={{
                 color: /clean/.test(location.pathname) ? "#9CB2FF" : "#fff",
               }}
-              to="/pro/clean/1"
+              to="/pro/camping/1"
             >
               캠핑용품
             </Link>
