@@ -15,7 +15,7 @@ const CartElement = (props) => {
         {props.check.at(props.index) ? "V" : ""}
       </div>
       <div className="cart-each-pro-box">
-        <img src="/" alt="" />
+        <img src={`/src/img/pro/${(props.url).split("/").at(-1)}.jpg`} alt="" />
         <Link to={props.url}>
           <p className="cart-each-name">{props.title}</p>
         </Link>

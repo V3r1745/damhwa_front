@@ -25,6 +25,7 @@ const JoinMembership = () => {
       console.log(result);
       if (result.data?.result === "success") {
         NotificationManager.success("완료", "회원가입 완료", 3000);
+        await axios.post("/cub")
         navigate("/login");
       }
     } else {
