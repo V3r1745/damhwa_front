@@ -14,7 +14,7 @@ import ProKitchen from "./app/proPage/proCategory/Kitchen";
 import ProLiving from "./app/proPage/proCategory/Living";
 import ProBathroom from "./app/proPage/proCategory/Bathroom";
 import ProStorage from "./app/proPage/proCategory/Storage";
-import ProCamping from "./app/proPage/proCategory/Camping";
+import ProCamping from "./app/proPage/proCategory/Clean";
 import Cart from "./app/cartPage/Cart"
 // import ProWashing from "./app/proPage/proCategory/Washing";
 import JoinMembership from "./app/loginPage/JoinMembership";
@@ -23,6 +23,7 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Header />}>
+      <Route path="/faq" element={<></>} />
         <Route path="/" element={<MainPage />} />
         <Route path="/intro" element={<Intro />}>
           {/* <Route path="/intro/bot" element={<Bot />} /> */}
