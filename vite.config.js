@@ -83,6 +83,13 @@ export default defineConfig({
         rewrite: (path) => {
           return path.replace(/^\/mod_item/, "")
         }
+      },
+      "/get_festa": {
+        target: "http://localhost:10149/api/festa/",
+        changeOrigin: true,
+        rewrite: (path) => {
+          return path.replace(/^\/get_festa/, "")
+        }
       }
     },
   },

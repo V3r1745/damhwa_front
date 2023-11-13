@@ -10,9 +10,9 @@ const btns = {
 
 const ProHome = () => {
   const images = [
-    "./src/img/main/1page_img1.jpg",
-    "./src/img/main/1page_img2.jpg",
-    "./src/img/main/1page_img3.jpg",
+    "/src/img/m/m_1.png",
+    "/src/img/m/m_2.png",
+    "/src/img/m/m_3.png",
   ];
   let slider = images.map((v, i) => <div key={i} className="pro-slide-effect">
     <div style={{ 'backgroundImage': `url(${v})` }}></div>
@@ -22,7 +22,7 @@ const ProHome = () => {
     <Slide {...btns}>
       {slider}
     </Slide>
-    <img src="./src/img/main/1page_img1.jpg" className="pro-main-img" alt="pro-main-img"/>
+    <img src="/src/img/m/s_1.png" className="pro-main-img" alt="pro-main-img"/>
   </>
 };
 

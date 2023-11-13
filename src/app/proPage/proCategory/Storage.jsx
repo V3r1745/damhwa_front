@@ -27,7 +27,7 @@ const Storage = () => {
             location={location.href}
             price={v.fields.product_price}
             title={v.fields.product_title}
-            img={v.product_main_img}
+            img={v.fields.product_main_img}
           />
         );
       })}

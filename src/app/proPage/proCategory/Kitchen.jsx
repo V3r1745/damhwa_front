@@ -10,7 +10,7 @@ const Kitchen = () => {
   useEffect(() => {
     (async () => {
       const result = await axios.get(
-        `/pro?type=4&page=${context.location.at(-1)}`
+        `/pro?type=1&page=${context.location.at(-1)}`
       );
       console.log(result.data);
       setFetchElement([...result.data]);
@@ -27,7 +27,7 @@ const Kitchen = () => {
             location={location.href}
             price={v.fields.product_price}
             title={v.fields.product_title}
-            img={v.product_main_img}
+            img={v.fields.product_main_img}
           />
         );
       })}

@@ -62,10 +62,10 @@ const ProDetail = () => {
   return (
     <section className="pro-detail-section">
       <div className="img-box">
-        <img src={fetchElement?.fields?.product_main_img} alt="main img" />
+        <img src={`/src/img/pro/${fetchElement?.fields?.product_main_img}`} alt="main img" />
         <div className="mark-box">
           <img
-            src="/src/img/intro_img.png"
+            src="/src/img/pro/badge/intro_img1.png"
             style={{
               display: parseInt(fetchElement?.fields?.product_badge.at(0))
                 ? "inline-block"
@@ -74,7 +74,7 @@ const ProDetail = () => {
             alt="mark-img"
           />
           <img
-            src="/src/img/intro_img.png"
+            src="/src/img/pro/badge/intro_img2.png"
             style={{
               display: parseInt(fetchElement?.fields?.product_badge.at(1))
                 ? "inline-block"
@@ -83,7 +83,7 @@ const ProDetail = () => {
             alt="mark-img"
           />
           <img
-            src="/src/img/intro_img.png"
+            src="/src/img/pro/badge/intro_img3.png"
             style={{
               display: parseInt(fetchElement?.fields?.product_badge.at(2))
                 ? "inline-block"
