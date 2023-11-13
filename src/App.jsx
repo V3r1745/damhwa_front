@@ -23,6 +23,7 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Header />}>
+      <Route path="/faq" element={<></>} />
         <Route path="/" element={<MainPage />} />
         <Route path="/intro" element={<Intro />}>
           {/* <Route path="/intro/bot" element={<Bot />} /> */}

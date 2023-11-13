@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import ChatElement from "./ChatElement";
 import axios from "axios";
 
@@ -7,6 +7,7 @@ axios.defaults.withCredentials = true;
 
 const Bot = (props) => {
   // const [displayOption, setDisplayOption] = useState(false);
+  const location = useLocation();
   if (localStorage.getItem("chat") === null) {
     localStorage.setItem(
       "chat",
@@ -103,7 +104,7 @@ const Bot = (props) => {
         <p
           className="close-bot xi-close link-none hover-cursor"
           onClick={() => {
-            props.headerThis.setState({...props.headerThis, bot: !props.bot});
+            props.headerThis.setState({ ...props.headerThis, bot: !props.bot });
           }}
         ></p>
       </h1>
