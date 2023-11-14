@@ -11,6 +11,7 @@ const Intro = () => {
     <>
       <main className="intro-main">
         {/* 컨텐츠 오버 박스 */}
+        <img className="intro-img" src="/src/img/intro_img.png" alt="intro_img.png" />
         <div className="intro-box">
           {/* 설립취지 폰트박스 */}
           <div className="effect-box">
@@ -30,7 +31,6 @@ const Intro = () => {
             </p>
             {/* 이미지 박스 */}
           </div>
-          <img className="intro-img" src="/src/img/intro_img.png" alt="intro_img.png" />
         </div>
 
         {/* 컨텐츠 이미지 박스 */}

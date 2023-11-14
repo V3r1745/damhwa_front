@@ -40,7 +40,7 @@ const App = () => {
         {/* <Route path="/pro/bot" element={<Pro><Bot /></Pro>} /> */}
         <Route path="/proDetail" element={<ProDetail />} />
         <Route path="/cart" element={<Cart />} />
-        <Route path="/event" element={<EventPage />} />
+        <Route path="/event" element={window.innerWidth < 750 ? <EventAllPage /> : <EventPage />} />
         <Route path="/eventAll" element={<EventAllPage />} />
         {/* <Route path="/bot" element={<Bot />} /> */}
         <Route path="/login" element={<Login />} />

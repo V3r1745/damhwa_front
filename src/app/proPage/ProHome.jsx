@@ -9,11 +9,11 @@ const btns = {
 }
 
 const ProHome = () => {
-  const images = [
+  const images = window.innerWidth < 750 ?  ["/src/img/m/m1.jpg", "/src/img/m/m4.jpg", "/src/img/m/m3.jpg"]: [
     "/src/img/m/m_1.png",
     "/src/img/m/m_2.png",
     "/src/img/m/m_3.png",
-  ];
+  ]
   let slider = images.map((v, i) => <div key={i} className="pro-slide-effect">
     <div style={{ 'backgroundImage': `url(${v})` }}></div>
   </div>

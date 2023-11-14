@@ -41,7 +41,7 @@ const Login = (props) => {
         <section className="login-outbox">
           {/* 로그인 로고 박스 */}
           <article className="login-logobox">
-            <img className="login-logo-img" src="" alt="" />
+            <img className="login-logo-img" src="/src/img/logo/logo.svg" alt="" />
             <h1 className="login-logo-font">로그인</h1>
           </article>
           <div>
@@ -73,7 +73,7 @@ const Login = (props) => {
         <section className="login-outbox">
           {/* 로그인 로고 박스 */}
           <article className="login-logobox">
-            <img className="login-logo-img" src="" alt="" />
+            <img className="login-logo-img" src="/src/img/logo/logo.svg" alt="" />
             <h1 className="login-logo-font">로그인</h1>
           </article>
           <div>
