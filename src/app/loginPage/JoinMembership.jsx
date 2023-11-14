@@ -55,6 +55,7 @@ const JoinMembership = () => {
       <article className="membership-outbox">
         <div className="membership-inbox">
           {/* 회원가입 로고 박스 */}
+          <img className="membership-logo-img" src="/src/img/Login/sprout.png"/>
           <h1 className="membership-logo-font">회원가입</h1>
         </div>
 
