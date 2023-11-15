@@ -3,8 +3,10 @@
 }
 
 html,
-body {
+body,
+#root {
   width: 100%;
+  height: 100%;
   overflow-x: hidden;
 }
 
@@ -72,38 +74,55 @@ header {
 
   // 컨텐츠 오버 박스
   .intro-box {
-    width: pxToVw(1920);
+    width: pxToVw(1620);
     height: pxToVw(480);
     background-color: #f9ffe3;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
-    align-content: center;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    align-content: space-around;
+
+      // 이미지 박스
+    .intro-img {
+      height: pxToVw(400);
+      width: pxToVw(600);
+    }
 
     // 설립취지 폰트박스
     .effect-box {
-      height: pxToVw(200);
+      height: pxToVw(190);
       width: pxToVw(800);
-      padding-top: pxToVw(40);
+
+      .effect-title {
+        font-size: pxToVw(42);
+        font-weight: bold;
+      }
+
+      .effect-str {
+        font-size: pxToVw(22);
+      }
     }
 
     // 설립목표 폰트박스
     .target-box {
-      height: pxToVw(200);
-      width: pxToVw(800);
-    }
+      height: pxToVw(170);
+      width: pxToVw(810);
 
-    // 이미지 박스
-    .intro-img {
-      height: pxToVw(350);
-      width: pxToVw(550);
-      margin-left: pxToVw(100);
+      .target-title {
+        font-size: pxToVw(42);
+        font-weight: bold;
+      }
+
+      .target-str {
+        font-size: pxToVw(22);
+      }
     }
   }
 
   .intro-addition-img-box {
-    width: pxToVw(1800);
+    width: pxToVw(1820);
     height: pxToVw(300);
     margin: 0 auto;
     display: flex;
@@ -129,7 +148,7 @@ header {
 // 메인 페이지 CSS
 .main-main {
   width: pxToVw(1920);
-  height: pxToVw(600);
+  height: pxToVw(700);
   margin-top: pxToVw(50);
 
   .each-slide-effect>div {
@@ -217,8 +236,10 @@ header {
     }
 
     .pro-main-img {
+      // width 1570 height 575
       width: pxToVw(1570);
-      height: pxToVw(525);
+      height: pxToVw(275)gi;
+      object-fit: cover;
     }
 
     & i {
@@ -246,25 +267,29 @@ header {
         height: pxToVw(380);
         cursor: pointer;
 
-        & img {
+        .pro-each-img {
           width: pxToVw(450);
           height: pxToVw(280);
+          background-size : contain;
+          background-repeat: no-repeat;
+          background-position: center;
         }
 
         &>.pro-each-text {
           width: pxToVw(450);
           height: pxToVw(30);
           font-size: pxToVw(20);
+          text-align: center;
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
         }
 
-        .pro-each-price-box {
+        .pro-each-price {
           width: pxToVw(450);
           height: pxToVw(30);
           display: flex;
-          justify-content: flex-end;
+          justify-content: center;
           font-size: pxToVw(20);
           font-weight: bold;
         }
@@ -601,6 +626,48 @@ header {
   }
 }
 
+// FAQ 페이지
+.faq-main {
+  width: pxToVw(1200);
+  height: pxToVw(750);
+  background: #333;
+  border: pxToVw(10) solid #555;
+  margin: 0 auto;
+  margin-top: pxToVw(50);
+  
+  .faq-text {
+    margin: pxToVw(10) 0 0 pxToVw(30);
+    font-size: pxToVw(40);  
+    color: #fff;
+  }
+
+  .faq-chatting-box {
+    width: pxToVw(1150);
+    height: pxToVw(660);
+    padding-top: pxToVw(1);
+    margin: 0 auto;
+    background: #555;
+
+    .faq-a-section {
+      width: pxToVw(575);
+      height: pxToVw(600);
+      margin-top: pxToVw(30);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      background: #666;
+
+      .faq-all {
+        font-size: pxToVw(25);
+        width: pxToVw(550);
+        height: pxToVw(90);
+        background: #333;
+        color: #fff;
+      }
+    }
+  }
+}
+
 .chat-bot {
   position: fixed;
   bottom: 30px;
@@ -787,7 +854,10 @@ header {
   background-color: rgba(226, 226, 226, 0.212);
   border-radius: 10px;
   box-shadow: 2px 2px rgba(128, 128, 128, 0.459);
-  margin: auto;
+  margin: pxToVw(100) auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 // 로그인 로고 박스
@@ -797,9 +867,13 @@ header {
   justify-content: center;
   margin-top: pxToVw(60);
 
+  .login-logo-img {
+    width: pxToVw(100);
+    height: pxToVw(80);
+  }
+
   &>h1 {
     font-size: pxToVw(50);
-    margin-top: pxToVw(50);
     font-weight: 100;
   }
 }
@@ -811,11 +885,10 @@ header {
   display: flex;
   border: none;
   border-radius: 10px;
-  box-shadow: 1px 1px 1px 1px inset rgba(128, 128, 128, 0.568);
-  margin: auto;
-  margin-top: pxToVw(120);
-  transition: box-shadow 0.1s;
+  margin: pxToVw(70) auto;
   padding-left: pxToVw(10);
+  box-shadow: 1px 1px 1px 1px inset rgba(128, 128, 128, 0.568);
+  transition: box-shadow 0.1s;
   box-sizing: border-box;
   box-shadow: inset 0 0 pxToVw(0) pxToVw(0) black, 0 0 pxToVw(5) pxToVw(1);
 
@@ -829,13 +902,12 @@ header {
 .login-next-btn {
   height: pxToVw(50);
   width: pxToVw(400);
-  margin: auto;
   display: flex;
-  margin-top: pxToVw(20);
   background-color: #4EAAFF;
   border: none;
   display: flex;
   align-items: center;
+  margin: pxToVw(25) auto;
   justify-content: center;
   font-size: pxToVw(20);
   border-radius: 10px;
@@ -847,7 +919,7 @@ header {
 .login-join-membership-btn {
   position: absolute;
   margin-left: pxToVw(930);
-  margin-top: pxToVw(30);
+  margin-top: pxToVw(-60);
   background: none;
   border: none;
   font-size: pxToVw(20);
@@ -1171,6 +1243,18 @@ header {
     text-align: center;
     margin-bottom: pxToVw(30);
     margin-top: pxToVw(-30);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .membership-logo-img {
+      width: pxToVw(50);
+      height: pxToVw(50);
+    }
+
+    .membership-logo-font {
+      margin-left: pxToVw(10);
+    }
   }
 
   // 회원가입 입력 박스
@@ -1193,7 +1277,6 @@ header {
       box-shadow: 1px 1px 1px 1px inset rgba(128, 128, 128, 0.568);
       margin: auto;
       font-size: pxToVw(25);
-      margin-bottom: pxToVw(20);
       padding-left: pxToVw(10);
     }
   }
@@ -1267,9 +1350,10 @@ header {
         height: 55%; }
         .main-main-M article .top-section .today-pro-suggestion {
           width: 89.9732620321vw;
-          height: 5%;
+          height: 7%;
           font-size: 5.013368984vw;
-          font-weight: bold; }
+          font-weight: bold; 
+          }
         .main-main-M article .top-section .today-pro-wrap {
           width: 89.9732620321vw;
           height: 93%;
@@ -1277,10 +1361,16 @@ header {
           flex-direction: row;
           flex-wrap: wrap;
           justify-content: space-between;
-          align-content: space-around; }
+          align-content: space-around;
+
+          & a {
+            width: 42.4465240642vw;
+            height: 45%;
+          }
+        }
           .main-main-M article .top-section .today-pro-wrap .each-pro-box {
             width: 42.4465240642vw;
-            height: 42%;
+            height: 100%;
             display: flex;
             flex-direction: column;
             background: #f7f7f7;
@@ -1292,10 +1382,11 @@ header {
               border-radius: 1.6711229947vw 1.6711229947vw 0 0; }
             .main-main-M article .top-section .today-pro-wrap .each-pro-box .each-pro-title {
               width: 40.4411764706vw;
-              height: 23%;
-              padding: 0.3342245989vw 1.0026737968vw 0.3342245989vw 1.0026737968vw;
-              font-size: 3.6764705882vw;
-              overflow: hidden; }
+              height: 24%;
+              padding: 0.62245989vw 1.0026737968vw 0.3342245989vw 1.0026737968vw;
+              font-size: 4.3764705882vw;
+              overflow: hidden;
+              }
             .main-main-M article .top-section .today-pro-wrap .each-pro-box .each-pro-price-box {
               width: 42.4465240642vw;
               height: 15%;
@@ -1354,59 +1445,72 @@ header {
       padding-top: 0.0334224599vw;
       overflow-x: hidden;
       overflow-y: scroll;
-      display: block; }
-      .intro-main > img {
-        width: 100vw;
-        height: 23%;
-        margin-top: 2%; }
-      .intro-main .intro-box {
-        width: 89.9732620321vw;
-        height: 60%;
+
+      .intro-box {
+        width: 100%;
+        height: 85%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-content: space-around;
         margin: 0 auto;
-        background: none;
-        display: block; }
-        .intro-main .intro-box .effect-box {
-          width: 89.9732620321vw;
-          height: 50%;
-          margin: 5% auto;
-          padding: 0; }
-          .intro-main .intro-box .effect-box > h1 {
-            width: 83.2887700535vw;
-            height: 20%;
-            float: left;
-            font-size: 5.6818181818vw;
-            font-weight: bold; }
-          .intro-main .intro-box .effect-box > p {
-            width: 89.9732620321vw;
-            height: 80%;
-            float: left;
-            margin-top: 0.5%;
-            font-size: 4.0106951872vw;
-            font-weight: normal; }
-        .intro-main .intro-box .target-box {
-          width: 89.9732620321vw;
-          height: 50%; }
-          .intro-main .intro-box .target-box > h1 {
-            width: 82.6203208556vw;
-            height: 20%;
-            float: left;
-            font-size: 5.6818181818vw;
-            font-weight: bold; }
-          .intro-main .intro-box .target-box > p {
-            width: 89.9732620321vw;
-            font-size: 4.0106951872vw;
-            margin-top: 0.5%;
-            height: 65%;
-            font-weight: normal;
-            float: left; }
-      .intro-main .intro-addition-img-box {
-        width: 100vw;
-        height: 11.7%;
-        display: flex; }
-        .intro-main .intro-addition-img-box img {
-          width: 100vw;
+
+        .intro-img  {
+          width: 100%;
+          height: 30%;
+        }
+
+        .effect-box {
+          width: 90%;
+          height: 35%;
+          margin: 0 auto;
+
+          .effect-title {
+            font-size: pxToVw(120);
+            font-weight: bold;
+          }
+
+          .effect-str {
+            font-size: pxToVw(70);
+          }
+        }
+
+        .target-box {
+          width: 90.2%;
+          height: 25%;
+          margin: 0 auto;
+
+          .target-title {
+            font-size: pxToVw(120);
+            font-weight: bold;
+          }
+
+          .target-str {
+            font-size: pxToVw(70);
+          }
+        }
+      } 
+
+      .intro-addition-img-box {
+        width: 100%;
+        height: 15%;
+        background: green;
+        display: flex; 
+
+        .intro-addition-img1 {
+          width: 50%;
           height: 100%;
-         }
+        }
+        .intro-addition-img2 {
+          width: 50%;
+          height: 100%;
+        }
+        .intro-addition-img3 {
+          display: none;
+        }
+      }
+    }
 
     .pro-main {
     width: 100vw;
