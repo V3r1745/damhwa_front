@@ -43,7 +43,7 @@ const ProDetail = () => {
           currentCount
         )}`
       );
-      console.log(result);
+      console.log("asd" + result);
       if (result?.data === "success") {
         NotificationManager.success(
           "성공",

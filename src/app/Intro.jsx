@@ -11,23 +11,20 @@ const Intro = () => {
     <>
       <main className="intro-main">
         {/* 컨텐츠 오버 박스 */}
-        <img className="intro-img" src="/src/img/intro_img.png" alt="intro_img.png" />
         <div className="intro-box">
+          <img className="intro-img" src="/src/img/intro_img.png" alt="intro_img.png" />
           {/* 설립취지 폰트박스 */}
           <div className="effect-box">
             <h1 className="effect-title">설립취지</h1>
             <p className="effect-str">
-              친환경 제품을 고객 편의에 맞게 제공하고 이벤트, 행사 등 환경과
-              관련한 여러 정보들을 다함께 공유할 수 있는 가치있는 서비스를
-              만들고자 시작하였습니다.
+              감당할 수 없는 쓰레기 증가로 이를 막기 위해서 생산단계부터 친환경적인 제품들을 팔아보면 어떨까 생각하였습니다. 이커머스 시장의 친환경 제품을 고객 편의에 맞게 추천하고 이벤트, 행사 등 환경과 관련한 여러 정보들을 다함께 공유할 수 있는 가치있는 서비스를 만들고자 시작하였습니다. 
             </p>
           </div>
           {/* 설립목표 폰트박스 */}
           <div className="target-box">
             <h1 className="target-title">설립목표</h1>
             <p className="target-str">
-              고객이 원하는 상품이 무엇인지 도와주고 검색을 했을 때, 자동으로
-              관련 상품을 알려주는 서비스
+            친환경 제품 및 행사들이 무엇이 있는지 알려주고 고객의 취향에 맞는 제품을 추천합니다. 주요 기능은 환경 친화 챗봇으로 유저가 검색을 했을 때 환경 친화적인 대답을 해줍니다.
             </p>
             {/* 이미지 박스 */}
           </div>

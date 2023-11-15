@@ -22,7 +22,8 @@ const ProHome = () => {
     <Slide {...btns}>
       {slider}
     </Slide>
-    <img src="/src/img/m/s_1.png" className="pro-main-img" alt="pro-main-img"/>
+    <img src="/src/img/m/s_12.png" className="pro-main-img" alt="pro-main-img"/> 
+    <img src="/src/img/m/s_11.png" className="pro-main-img" alt="pro-main-img"/> 
   </>
 };
 

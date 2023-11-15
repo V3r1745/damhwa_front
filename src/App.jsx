@@ -8,6 +8,7 @@ import ProDetail from "./app/proPage/ProDetail";
 // import Bot from "./app/bot/Bot";
 import MainPage from "./app/mainPage/Main";
 import Login from "./app/loginPage/Login";
+import FaqPage from "./app/faqPage/Faq";
 import EventPage from "./app/eventPage/Event";
 import EventAllPage from "./app/eventPage/EventAll";
 import ProKitchen from "./app/proPage/proCategory/Kitchen";
@@ -23,7 +24,7 @@ const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Header />}>
-      <Route path="/faq" element={<></>} />
+      <Route path="/faq" element={<FaqPage />} />
         <Route path="/" element={<MainPage />} />
         <Route path="/intro" element={<Intro />}>
           {/* <Route path="/intro/bot" element={<Bot />} /> */}
